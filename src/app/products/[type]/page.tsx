@@ -1,50 +1,26 @@
+"use client";
+
+import { Filter } from "@/components/Filter";
 import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
 import { Product } from "@/components/Product";
-import { Slider } from "@/components/Slider";
-import Link from "next/link";
+import { useEffect, useState } from "react";
 
-export default function Main() {
+interface ProductItem {
+  title: string;
+  type: string;
+  id: string;
+  url: string;
+  size: string;
+  image: string;
+  price: number;
+}
+
+export default function Products (props: any) {
+  const [title, setTitle] = useState("");
+
+    console.log(props)
   const product = [
-    /* best-sellers */
-
-    {
-      title: "t-shirt-1",
-      type: "best",
-      id: "22",
-      url: "/pageproduct",
-      size: "G",
-      image: "/t-shirt-1.jpg",
-      price: 54.95,
-    },
-    {
-      title: "t-shirt-2",
-      id: "23",
-      type: "best",
-      url: "/pageproduct",
-      size: "G",
-      image: "/t-shirt-2.jpg",
-      price: 60.95,
-    },
-    {
-      title: "t-shirt-3",
-      type: "best",
-      id: "24",
-      url: "/pageproduct",
-      size: "G",
-      image: "/t-shirt-3.jpg",
-      price: 54.95,
-    },
-    {
-      title: "t-shrit-4",
-      id: "25",
-      type: "best",
-      url: "/pageproduct",
-      size: "G",
-      image: "/cap-1.jpg",
-      price: 60.95,
-    },
-
     /* t-shirts 👕 */
 
     {
@@ -239,25 +215,64 @@ export default function Main() {
     },
   ];
 
-  // const flickityOptions = {
-  //   groupCells: 4,
-  //   initialIndex: 2,
-  //   autoPlay: true,
-  //   draggable: true,
-  //   pageDots: true,
-  // };
+  const prodType = props.params.type;
+
+  useEffect(() => {
+    if (prodType === "tshirt") {
+      setTitle("T-shirts 👕");
+    } else if (prodType === "cap") {
+      setTitle("Caps 🧢");
+    } else if (prodType === "shoe") {
+      setTitle("Shoes 👟");
+    }
+  }, [prodType]);
+
+  const [filteredProducts, setFilteredProducts] = useState(product); // estado para armazenar a lista filtrada de produtos
+  const handleFilter = (type: string) => {
+    // Função de callback para filtrar os produtos com base no tipo
+    const filteredProducts = product.filter((product) => product.type === type);
+    setFilteredProducts(product); // atualiza o estado com a lista filtrada de produtos
+  };
+
+  console.log(prodType);
+
+  const tshirtProducts = product.filter((product) => product.type === "tshirt");
+
+  // const capProducts = filteredProducts.filter(
+  //   (element: ProductItem) => element.type === "cap"
+  // );
+
+  // const shoeProducts = filteredProducts.filter(
+  //   (element: ProductItem) => element.type === "shoe"
+  // );
+
+  function best(size: string) {}
+
+  function handleResetClick() {
+    console.log("resetou");
+  }
+
+  function lowestPrice(minPrice: number, maxPrice: number) {}
+  function higherPrice(minPrice: number, maxPrice: number) {}
 
   return (
-    <div id="" className="flex flex-col bg-white text-black">
+    <div id="" className="bg-white text-black flex flex-col">
       <Nav />
-      <Slider />
       <div className="xs:h-auto grid xs:grid-cols-1 p-20 lg:grid-cols-4 gap-24 lg:h-auto">
-        <div className="xs:col-span-1 lg:col-span-4 ">
+        <div className="grid lg:justify-items-start xs:justify-items-center col-span-1 lg:grid-rows-4 xs:grid-rows-1 w-full xs:row-end-3 lg:row-start-1">
+          <Filter
+            best={product ? (size) => best(size) : best}
+            onReset={handleResetClick}
+            lowestPrice={lowestPrice}
+            higherPrice={higherPrice}
+          />
+        </div>
+        <div className="xs:col-span-1 lg:col-span-3">
           <div className="grid justify-items-center">
-            <h3 className="">Best Sellers</h3>
-            <div className="grid items-center lg:gap-16 xs:gap-20 w-5/6 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
+            <h3 className="font-bold text-2xl mb-5">{title}</h3>
+            <div className="grid items-center lg:gap-10 xs:gap-20 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
               {product
-                .filter((element) => element.type == "best")
+                .filter((element) => element.type == prodType)
                 .map((element) => (
                   <Product
                     url={element.url}
@@ -268,69 +283,14 @@ export default function Main() {
                     price={element.price}
                   />
                 ))}
+              <span
+                className={`xs:h-screen lg:h-auto xs:col-span-1 lg:col-span-3 grid justify-items-center text-2xl ${
+                  product.length != 0 ? "hidden" : "block"
+                } font-bold`}
+              >
+                empty
+              </span>
             </div>
-          </div>
-          <div className="grid  justify-items-center">
-            <h3 className="mt-16">T-shirts</h3>
-            <div className="grid items-center lg:gap-16 xs:gap-20 w-5/6 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
-              {product
-                .filter((element) => element.type == "tshirt")
-                .slice(0, 4)
-                .map((element) => (
-                  <Product
-                    url={element.url}
-                    id={element.id}
-                    key={element.id}
-                    image={element.image}
-                    title={element.title}
-                    price={element.price}
-                  />
-                ))}
-            </div>
-          </div>
-          <div className="grid justify-items-center">
-            <h3 className="mt-16">Caps</h3>
-            <div className="grid items-center lg:gap-16 xs:gap-20 w-5/6 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
-              {product
-                .filter((element) => element.type == "cap")
-                .slice(0, 4)
-                .map((element) => (
-                  <Product
-                    url={element.url}
-                    id={element.id}
-                    key={element.id}
-                    image={element.image}
-                    title={element.title}
-                    price={element.price}
-                  />
-                ))}
-            </div>
-          </div>
-          <div className="grid justify-items-center">
-            <h3 className="mt-16">Shoe</h3>
-            <div className="grid items-center lg:gap-16 xs:gap-20 w-5/6 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6 mb-24">
-              {product
-                .filter((element) => element.type == "shoe")
-                .slice(0, 4)
-                .map((element) => (
-                  <Product
-                    url={element.url}
-                    id={element.id}
-                    key={element.id}
-                    image={element.image}
-                    title={element.title}
-                    price={element.price}
-                  />
-                ))}
-            </div>
-          </div>
-          <div className="grid justify-items-center">
-            <Link
-              href="/all"
-              className="bg-zinc-700 text-white p-2 font-semibold rounded-xl hover:scale-105 hover:shadow-2xl transition-all"
-            >
-              See all the products
-            </Link>
           </div>
         </div>
       </div>

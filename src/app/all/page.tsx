@@ -1,47 +1,49 @@
-import { Footer } from "@/components/Footer";
-import { Nav } from "@/components/Nav";
-import { Product } from "@/components/Product";
-import { Slider } from "@/components/Slider";
-import Link from "next/link";
+"use client";
 
-export default function Main() {
+import { Footer } from "@/components/Footer";
+import { Product } from "@/components/Product";
+import { useState } from "react";
+import Link from "next/link";
+import { Nav } from "@/components/Nav";
+
+export const AllProduct = () => {
   const product = [
     /* best-sellers */
 
     {
       title: "t-shirt-1",
       type: "best",
-      id: "22",
+      id: "1",
       url: "/pageproduct",
       size: "G",
-      image: "/t-shirt-1.jpg",
+      image: "./t-shirt-1.jpg",
       price: 54.95,
     },
     {
       title: "t-shirt-2",
-      id: "23",
+      id: "2",
       type: "best",
       url: "/pageproduct",
       size: "G",
-      image: "/t-shirt-2.jpg",
+      image: "t-shirt-2.jpg",
       price: 60.95,
     },
     {
       title: "t-shirt-3",
       type: "best",
-      id: "24",
+      id: "1",
       url: "/pageproduct",
       size: "G",
-      image: "/t-shirt-3.jpg",
+      image: "./t-shirt-3.jpg",
       price: 54.95,
     },
     {
       title: "t-shrit-4",
-      id: "25",
+      id: "2",
       type: "best",
       url: "/pageproduct",
       size: "G",
-      image: "/cap-1.jpg",
+      image: "cap-1.jpg",
       price: 60.95,
     },
 
@@ -169,7 +171,7 @@ export default function Main() {
 
     {
       title: "cap-1",
-      id: "14",
+      id: "1",
       type: "cap",
       url: "/pageproduct",
       image: "/cap-1.jpg",
@@ -177,7 +179,7 @@ export default function Main() {
     },
     {
       title: "cap-2",
-      id: "15",
+      id: "1",
       type: "cap",
       url: "/pageproduct",
       image: "/cap-1.jpg",
@@ -185,7 +187,7 @@ export default function Main() {
     },
     {
       title: "cap-3",
-      id: "16",
+      id: "1",
       type: "cap",
       url: "/pageproduct",
       image: "/cap-1.jpg",
@@ -193,7 +195,7 @@ export default function Main() {
     },
     {
       title: "cap-4",
-      id: "17",
+      id: "1",
       type: "cap",
       url: "/pageproduct",
       image: "/cap-1.jpg",
@@ -204,7 +206,7 @@ export default function Main() {
 
     {
       title: "shoe-1",
-      id: "18",
+      id: "1",
       type: "shoe",
       url: "/pageproduct",
       image: "/shoe-1-1.png",
@@ -213,7 +215,7 @@ export default function Main() {
 
     {
       title: "shoe-1",
-      id: "19",
+      id: "1",
       type: "shoe",
       url: "/pageproduct",
       image: "/shoe-1.jpg",
@@ -222,7 +224,7 @@ export default function Main() {
 
     {
       title: "shoe-1",
-      id: "20",
+      id: "1",
       type: "shoe",
       url: "/pageproduct",
       image: "/shoe-1-2.png",
@@ -231,7 +233,7 @@ export default function Main() {
 
     {
       title: "shoe-1",
-      id: "21",
+      id: "1",
       type: "shoe",
       url: "/pageproduct",
       image: "/shoe-1-3.png",
@@ -239,61 +241,75 @@ export default function Main() {
     },
   ];
 
-  // const flickityOptions = {
-  //   groupCells: 4,
-  //   initialIndex: 2,
-  //   autoPlay: true,
-  //   draggable: true,
-  //   pageDots: true,
-  // };
+
+  interface Props {
+    best: () => void;
+    onReset: () => void;
+    lowestPrice: () => void;
+    higherPrice: () => void;
+  }
+
+  const [tshirt, setTshirts] = useState(product);
 
   return (
-    <div id="" className="flex flex-col bg-white text-black">
+    <div className="flex flex-col bg-white text-black">
       <Nav />
-      <Slider />
-      <div className="xs:h-auto grid xs:grid-cols-1 p-20 lg:grid-cols-4 gap-24 lg:h-auto">
-        <div className="xs:col-span-1 lg:col-span-4 ">
-          <div className="grid justify-items-center">
-            <h3 className="">Best Sellers</h3>
-            <div className="grid items-center lg:gap-16 xs:gap-20 w-5/6 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
-              {product
-                .filter((element) => element.type == "best")
-                .map((element) => (
-                  <Product
-                    url={element.url}
-                    id={element.id}
-                    key={element.id}
-                    image={element.image}
-                    title={element.title}
-                    price={element.price}
-                  />
-                ))}
-            </div>
-          </div>
-          <div className="grid  justify-items-center">
-            <h3 className="mt-16">T-shirts</h3>
-            <div className="grid items-center lg:gap-16 xs:gap-20 w-5/6 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
+      <div className="xs:h-auto grid xs:grid-cols-1 p-20 lg:grid-cols-4 lg:gap-24 lg:h-auto">
+        <div className="grid lg:justify-items-start xs:justify-items-center col-span-1 lg:grid-rows-4 xs:grid-rows-1 w-full xs:row-start-1 lg:row-start-1">
+          <nav className="flex flex-col gap-6 lg:p-20 xs:p-0">
+            <strong className="">Categories</strong>
+            <ul className="flex flex-col gap-2 justify-center items-center">
+              <li>
+                <a href="#tshirts" className="">
+                  T-shirts 👕
+                </a>
+              </li>
+              <li>
+                <a href="#caps">Caps 🧢</a>
+              </li>
+              <li>
+                <a href="#shoes">Shoes 👟</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div id="tshirts" className="xs:col-span-1 lg:col-span-3">
+          <div className="grid justify-items-center mt-16">
+            <h3 className="font-bold">T-shirts</h3>
+            <div className="grid items-center lg:gap-10 xs:gap-20 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
               {product
                 .filter((element) => element.type == "tshirt")
                 .slice(0, 4)
-                .map((element) => (
-                  <Product
-                    url={element.url}
-                    id={element.id}
-                    key={element.id}
-                    image={element.image}
-                    title={element.title}
-                    price={element.price}
-                  />
-                ))}
+                .map(
+                  (
+                    element //const linha 65
+                  ) => (
+                    <Product
+                      url={element.url}
+                      key={element.id}
+                      id={element.id}
+                      image={element.image}
+                      title={element.title}
+                      price={element.price}
+                    />
+                  )
+                )}
+              <span className={`${tshirt.length != 0 ? "hidden" : "block"}`}>
+                empty
+              </span>
             </div>
+            <Link
+              href="/products/tshirt"
+              className="border-2 bg-slate-100 p-2 w-fit rounded-3xl"
+            >
+              See more
+            </Link>
           </div>
-          <div className="grid justify-items-center">
-            <h3 className="mt-16">Caps</h3>
-            <div className="grid items-center lg:gap-16 xs:gap-20 w-5/6 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
+          <div id="caps" className="grid justify-items-center">
+            <h3 className="mt-16 font-bold">Caps</h3>
+            <div className="grid items-center lg:gap-10 xs:gap-20 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
               {product
                 .filter((element) => element.type == "cap")
-                .slice(0, 4)
                 .map((element) => (
                   <Product
                     url={element.url}
@@ -304,14 +320,22 @@ export default function Main() {
                     price={element.price}
                   />
                 ))}
+              <span className={`${tshirt.length != 0 ? "hidden" : "block"}`}>
+                empty
+              </span>
             </div>
+            <Link
+              href="/products/cap"
+              className="border-2 bg-slate-100 p-2 w-fit rounded-3xl"
+            >
+              See more
+            </Link>
           </div>
-          <div className="grid justify-items-center">
-            <h3 className="mt-16">Shoe</h3>
-            <div className="grid items-center lg:gap-16 xs:gap-20 w-5/6 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6 mb-24">
+          <div id="shoes" className="grid justify-items-center mb-24">
+            <h3 className="mt-16 font-bold">Shoes</h3>
+            <div className="grid justify-items-center lg:gap-10 xs:gap-20 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
               {product
                 .filter((element) => element.type == "shoe")
-                .slice(0, 4)
                 .map((element) => (
                   <Product
                     url={element.url}
@@ -322,14 +346,15 @@ export default function Main() {
                     price={element.price}
                   />
                 ))}
+              <span className={`${tshirt.length != 0 ? "hidden" : "block"}`}>
+                empty
+              </span>
             </div>
-          </div>
-          <div className="grid justify-items-center">
             <Link
-              href="/all"
-              className="bg-zinc-700 text-white p-2 font-semibold rounded-xl hover:scale-105 hover:shadow-2xl transition-all"
+              href="/products/shoe"
+              className="flex justify-center border-2 bg-slate-100 p-2 w-fit rounded-3xl"
             >
-              See all the products
+              See more
             </Link>
           </div>
         </div>
@@ -337,4 +362,6 @@ export default function Main() {
       <Footer />
     </div>
   );
-}
+};
+
+export default AllProduct;
