@@ -5,6 +5,7 @@ import { Slider } from "@/components/Slider";
 import Link from "next/link";
 
 export default function Main() {
+  
   const product = [
     /* best-sellers */
 
