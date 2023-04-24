@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Nav } from "@/components/Nav";
 
-export const AllProduct = () => {
+export const All = () => {
 
   const product = [
     /* best-sellers */
