@@ -7,6 +7,7 @@ import Link from "next/link";
 import { Nav } from "@/components/Nav";
 
 export const AllProduct = () => {
+
   const product = [
     /* best-sellers */
 
@@ -363,5 +364,3 @@ export const AllProduct = () => {
     </div>
   );
 };
-
-export default AllProduct;
