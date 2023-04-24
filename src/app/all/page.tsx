@@ -1,12 +1,10 @@
-"use client";
-
 import { Footer } from "@/components/Footer";
 import { Product } from "@/components/Product";
 import { useState } from "react";
 import Link from "next/link";
 import { Nav } from "@/components/Nav";
 
-const AllProduct = () => {
+export const AllProduct = () => {
 
   const product = [
     /* best-sellers */
@@ -364,5 +362,3 @@ const AllProduct = () => {
     </div>
   );
 };
-
-export default AllProduct;

@@ -16,10 +16,11 @@ interface ProductItem {
   price: number;
 }
 
-export default function Products (props: any) {
+export default function Products(props: any) {
   const [title, setTitle] = useState("");
 
-    console.log(props)
+  console.log(props);
+
   const product = [
     /* t-shirts 👕 */
 
