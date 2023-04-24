@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Search } from "../Search";
-import Image from "next/image";
 
 export const Nav = () => {
   return (
