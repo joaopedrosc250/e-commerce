@@ -1,3 +1,5 @@
+"use client";
+
 import { Filter } from "@/components/Filter";
 import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
