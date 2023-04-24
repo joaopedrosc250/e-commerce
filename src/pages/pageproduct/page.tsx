@@ -1,7 +1,7 @@
 import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
 
-export const PageProduct = () => {
+export default function PageProduct() {
   return (
     <div className="flex flex-col">
       <Nav />

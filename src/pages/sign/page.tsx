@@ -1,11 +1,9 @@
 import { Form } from "@/components/Form"
 
-const Sign = () => {
+export default function Sign() {
   return (
     <div className=''>
     <Form />
     </div>
   )
 }
-
-export default Sign
