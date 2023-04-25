@@ -254,7 +254,7 @@ export default function PageProduct() {
             </div>
           </div>
           <div className="flex justify-center items-center">
-            <p className="indent-12 w-3/6">
+            <p className="indent-12 xs:w-5/6 lg:w-3/6 ">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
               corporis harum, unde quisquam facere nulla neque quas provident
               voluptatibus blanditiis officia consequuntur, repellat quod enim!

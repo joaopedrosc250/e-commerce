@@ -11,7 +11,7 @@ export const Footer = () => {
           <p>Streetwear shop online: style meets comfort.</p>
         </div>
         <div className="flex gap-4 justify-center">
-          <ul className="grid lg:grid-cols-1 xs:grid-cols-1">
+          <ul className="flex flex-col justify-center lg:items-start xs:items-center gap-2">
             <li>
               <a
                 className="hover:underline hover:underline-offset-1 transition-all"
@@ -38,7 +38,7 @@ export const Footer = () => {
               </a>
             </li>
           </ul>
-          <ul className="grid lg:grid-cols-1 xs:grid-cols-1">
+          {/* <ul className="flex gap-2">
             <li>
               <a
                 className="hover:underline hover:underline-offset-1 transition-all"
@@ -66,7 +66,7 @@ export const Footer = () => {
                 Contact me!
               </a>
             </li>
-          </ul>
+          </ul> */}
         </div>
         <div></div>
         <div className="flex justify-center items-center flex-col gap-1">
