@@ -3,7 +3,7 @@ import { Search } from "../Search";
 
 export const Nav = () => {
   return (
-    <div className="flex lg:flex-row xs:flex-col justify-around items-center p-6">
+    <div className="bg-white text-black flex lg:flex-row xs:flex-col justify-around items-center p-6">
       <div>
         <a href="/" className="text-3xl">UrbanAvenue</a>
       </div>
@@ -22,7 +22,7 @@ export const Nav = () => {
             </li>
             <li>
               <a className="hover:underline hover:underline-offset-2" href="#">
-                Login
+                Sign in
               </a>
             </li>
             <li>

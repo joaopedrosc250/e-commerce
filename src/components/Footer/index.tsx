@@ -15,6 +15,33 @@ export const Footer = () => {
             <li>
               <a
                 className="hover:underline hover:underline-offset-1 transition-all"
+                href="/"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                className="hover:underline hover:underline-offset-1 transition-all"
+                href="/all"
+              >
+                Products
+              </a>
+            </li>
+            <li>
+              <a
+                className="hover:underline hover:underline-offset-1 transition-all"
+                href="mailto: amaralrdev@gmail.com"
+                target="_blank"
+              >
+                Contact me!
+              </a>
+            </li>
+          </ul>
+          <ul className="grid lg:grid-cols-1 xs:grid-cols-1">
+            <li>
+              <a
+                className="hover:underline hover:underline-offset-1 transition-all"
                 href="mailto: amaralrdev@gmail.com"
                 target="_blank"
               >
@@ -40,38 +67,9 @@ export const Footer = () => {
               </a>
             </li>
           </ul>
-          <ul className="grid lg:grid-cols-1 xs:grid-cols-1">
-          <li>
-            <a
-              className="hover:underline hover:underline-offset-1 transition-all"
-              href="mailto: amaralrdev@gmail.com"
-              target="_blank"
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              className="hover:underline hover:underline-offset-1 transition-all"
-              href="mailto: amaralrdev@gmail.com"
-              target="_blank"
-            >
-              Products
-            </a>
-          </li>
-          <li>
-            <a
-              className="hover:underline hover:underline-offset-1 transition-all"
-              href="mailto: amaralrdev@gmail.com"
-              target="_blank"
-            >
-              Contact me!
-            </a>
-          </li>
-        </ul>
         </div>
         <div></div>
-        <div className="flex justify-center items-center flex-col">
+        <div className="flex justify-center items-center flex-col gap-1">
           <h3 className="">Social</h3>
           <div className="flex justify-center items-center text-2xl flex-row">
             <a

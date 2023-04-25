@@ -21,14 +21,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-      <link rel="icon" type="image/png" href="/Urban-logo.png" />
+      <link rel="shortcut icon" href="/next.ico" />
+
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
       </Head>
       <body
-        className={`scrollbar-thin scrollbar-track-zinc-100 scrollbar-thumb-zinc-300 ${vollkorn.className}`}
+        className={`scrollbar-thin scrollbar-track-white scrollbar-thumb-slate-300 ${vollkorn.className}`}
       >
         {children}
       </body>
