@@ -1,6 +1,7 @@
 import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
 import { Product } from "@/components/Product";
+import Image from "next/image";
 
 export default function PageProduct() {
   const product = [
@@ -243,10 +244,12 @@ export default function PageProduct() {
       <div className="flex flex-row gap-20 justify-center items-center lg:h-auto xs:h-auto">
         <div className="flex flex-col justify-center gap-16 items-center mt-20">
           <div className="flex lg:flex-row xs:flex-col gap-32 justify-center items-center">
-            <img
-              src="model-5.jpg"
-              alt="product"
-              className="w-80 h-[30rem] rounded-3xl opacity-95 hover:opacity-100"
+            <Image
+              width={1920}
+              height={1080}
+              src={'/model-5.jpg'}
+              alt={'product'}
+              className="w-80 h-[30rem] rounded-3xl"
             />
             <div className="flex flex-col gap-6">
               <h2 className="font-bold text-2xl">T-shirt-1</h2>

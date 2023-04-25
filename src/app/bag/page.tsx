@@ -1,11 +1,9 @@
 import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
 import { Product } from "@/components/Product";
-import { Slider } from "@/components/Slider";
-import Link from "next/link";
+import Image from "next/image";
 
-export default function Main() {
-  
+export default function Bag() {
   const product = [
     /* best-sellers */
 
@@ -208,12 +206,12 @@ export default function Main() {
       id: "18",
       type: "shoe",
       url: "/pageproduct",
-      image: "/jordan-3.jpg",
+      image: "/shoe-1-1.png",
       price: 69.99,
     },
 
     {
-      title: "shoe-2",
+      title: "shoe-1",
       id: "19",
       type: "shoe",
       url: "/pageproduct",
@@ -222,117 +220,60 @@ export default function Main() {
     },
 
     {
-      title: "shoe-3",
+      title: "shoe-1",
       id: "20",
       type: "shoe",
       url: "/pageproduct",
-      image: "/jordan-3.jpg",
+      image: "/shoe-1-2.png",
       price: 69.99,
     },
 
     {
-      title: "shoe-4",
+      title: "shoe-1",
       id: "21",
       type: "shoe",
       url: "/pageproduct",
-      image: "/court-1.jpg",
+      image: "/shoe-1-3.png",
       price: 69.99,
     },
   ];
 
-  // const flickityOptions = {
-  //   groupCells: 4,
-  //   initialIndex: 2,
-  //   autoPlay: true,
-  //   draggable: true,
-  //   pageDots: true,
-  // };
-
   return (
-    <div id="" className="flex flex-col bg-white text-black">
+    <div className="bg-white flex flex-col gap-20 text-black lg:h-auto xs:h-auto">
       <Nav />
-      <Slider />
-      <div className="xs:h-auto grid xs:grid-cols-1 p-20 lg:grid-cols-4 gap-24 lg:h-auto">
-        <div className="xs:col-span-1 lg:col-span-4 ">
-          <div className="grid justify-items-center">
-            <h3 className="">Best Sellers</h3>
-            <div className="grid items-center lg:gap-16 xs:gap-20 w-5/6 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
-              {product
-                .filter((element) => element.type == "best")
-                .map((element) => (
-                  <Product
-                    url={element.url}
-                    id={element.id}
-                    key={element.id}
-                    image={element.image}
-                    title={element.title}
-                    price={element.price}
-                  />
-                ))}
-            </div>
+      <div className="flex lg:flex-row xs:flex-col justify-center gap-20 items-center w-full h-full">
+        <div className="flex flex-col justify-center items-center gap-14">
+          <div className="flex flex-row gap-2 justify-center items-center">
+            <h2 className="font-bold text-3xl">Bag</h2>
+            <Image
+              width={40}
+              height={45}
+              src={"/bag.png"}
+              alt="bag"
+            />
           </div>
-          <div className="grid  justify-items-center">
-            <h3 className="mt-16">T-shirts</h3>
-            <div className="grid items-center lg:gap-16 xs:gap-20 w-5/6 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
-              {product
-                .filter((element) => element.type == "tshirt")
-                .slice(0, 4)
-                .map((element) => (
-                  <Product
-                    url={element.url}
-                    id={element.id}
-                    key={element.id}
-                    image={element.image}
-                    title={element.title}
-                    price={element.price}
-                  />
-                ))}
-            </div>
-          </div>
-          <div className="grid justify-items-center">
-            <h3 className="mt-16">Caps</h3>
-            <div className="grid items-center lg:gap-16 xs:gap-20 w-5/6 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
-              {product
-                .filter((element) => element.type == "cap")
-                .slice(0, 4)
-                .map((element) => (
-                  <Product
-                    url={element.url}
-                    id={element.id}
-                    key={element.id}
-                    image={element.image}
-                    title={element.title}
-                    price={element.price}
-                  />
-                ))}
-            </div>
-          </div>
-          <div className="grid justify-items-center">
-            <h3 className="mt-16">Shoe</h3>
-            <div className="grid items-center lg:gap-16 xs:gap-20 w-5/6 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6 mb-24">
-              {product
-                .filter((element) => element.type == "shoe")
-                .slice(0, 4)
-                .map((element) => (
-                  <Product
-                    url={element.url}
-                    id={element.id}
-                    key={element.id}
-                    image={element.image}
-                    title={element.title}
-                    price={element.price}
-                  />
-                ))}
-            </div>
-          </div>
-          <div className="grid justify-items-center">
-            <Link
-              href="/all"
-              className="bg-zinc-700 text-white p-2 font-semibold rounded-xl hover:scale-105 hover:shadow-2xl transition-all"
-            >
-              See all the products
-            </Link>
-          </div>
+          <div className="bg-slate-100 rounded-3xl lg:p-[20rem] xs:p-[10rem]">aaa</div>
+        </div>
+        <div className="bg-slate-100 rounded-3xl p-[10rem]">valor</div>
+      </div>
+
+
+      <div className="flex flex-col justify-center items-center">
+        <h3 className="mt-10 text-xl">Other products</h3>
+        <div className="grid items-center lg:gap-16 xs:gap-20 w-5/6 lg:grid-cols-5 xs:grid-cols-1 md:grid-cols-2 mt-6 mb-24">
+          {product
+            .filter((element) => element)
+            .slice(0, 5)
+            .map((element) => (
+              <Product
+                url={element.url}
+                id={element.id}
+                key={element.id}
+                image={element.image}
+                title={element.title}
+                price={element.price}
+              />
+            ))}
         </div>
       </div>
       <Footer />
