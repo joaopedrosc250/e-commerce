@@ -242,7 +242,7 @@ export default function PageProduct() {
       <Nav />
       <div className="flex flex-row gap-20 justify-center items-center lg:h-auto xs:h-auto">
         <div className="flex flex-col justify-center gap-16 items-center mt-20">
-          <div className="flex flex-row gap-32 justify-center items-center">
+          <div className="flex lg:flex-row xs:flex-col gap-32 justify-center items-center">
             <img
               src="model-5.jpg"
               alt="product"
