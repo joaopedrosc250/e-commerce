@@ -17,6 +17,7 @@
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
     "flickity": "^3.0.0",
+    "keen-slider": "^6.8.5",
     "next": "^13.3.1",
     "postcss": "8.4.23",
     "react": "18.2.0",

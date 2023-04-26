@@ -5,8 +5,8 @@ export const Footer = () => {
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
       />
-      <div className="grid lg:grid-cols-3 lg:w-2/4 lg:justify-items-center xs:grid-cols-1 md:grid-cols-3 md:justify-items-center md:w-5/6 xs:justify-items-center xs:gap-6 w-full">
-        <div className="flex flex-col items-center">
+      <div className="grid lg:grid-cols-3 lg:w-3/4 lg:justify-items-center xs:grid-cols-1 md:grid-cols-3 md:justify-items-center md:w-5/6 xs:justify-items-center xs:gap-6 w-full">
+        <div className="flex flex-col justify-center items-center">
           <h1 className="text-3xl">UrbanAvenue</h1>
           <p>Streetwear shop online: style meets comfort.</p>
         </div>

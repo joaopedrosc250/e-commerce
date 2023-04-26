@@ -10,7 +10,7 @@ export const Nav = () => {
           UrbanAvenue
         </a>
       </div>
-      <div className="grid col-start-3 justify-items-center lg:absolute xs:relative xs:p-2">
+      <div className="grid col-start-3 justify-items-center lg:absolute md:relative xs:relative xs:p-2 md:p-4 lg:p-6">
         <Search />
       </div>
       <div className="">
