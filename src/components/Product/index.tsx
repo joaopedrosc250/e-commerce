@@ -21,7 +21,7 @@ export const Product = ({ url, id, image, title, price }: InputProps) => {
         />
         <p className="text-lg">{title}</p>
       </Link>
-      <p className="">{price}</p>
+      <p className="text-center">U$ {price}</p>
     </div>
   );
 };

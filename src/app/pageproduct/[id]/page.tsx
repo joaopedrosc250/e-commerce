@@ -5,7 +5,6 @@ import Image from "next/image";
 import data from "../../utils/data";
 
 export default function PageProduct(props: any) {
-  
   const prodId = props.params.id;
 
   return (
@@ -24,11 +23,23 @@ export default function PageProduct(props: any) {
                     key={element.id}
                     src={element.image}
                     alt={element.type}
-                    className="w-full h-[20rem] rounded-3xl"
+                    className="w-full h-[40rem] rounded-3xl"
                   />
                   <div className="flex flex-col gap-6 w-2/6">
                     <h2 className="font-bold text-2xl">{element.title}</h2>
-                    <p className="text-xl">{element.price}</p>
+                    <p className="text-xl">U${element.price}</p>
+                    <div className="flex gap-2">
+                      <input
+                        type="button"
+                        value="Add to cart"
+                        className="bg-zinc-200 p-2 rounded-3xl hover:rounded-none transition-all"
+                      />
+                      <input
+                        type="button"
+                        value="Finish"
+                        className="bg-zinc-200 p-2 rounded-3xl hover:rounded-none transition-all"
+                      />
+                    </div>
                   </div>
                 </>
               ))}
@@ -45,7 +56,7 @@ export default function PageProduct(props: any) {
             <h3 className="mt-10 text-xl">Other products</h3>
             <div className="grid items-center lg:gap-16 xs:gap-20 w-5/6 lg:grid-cols-5 xs:grid-cols-1 md:grid-cols-2 mt-6 mb-24">
               {data.product
-                .sort(() => Math.random() - 0.5) 
+                .sort(() => Math.random() - 0.5)
                 .filter((element) => element)
                 .slice(0, 5)
                 .map((element) => (
