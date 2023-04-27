@@ -1,5 +1,5 @@
-import { Response } from "express";
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-export function handleRequest(res: Response) {
-  return res.send('Hello world!');
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  return res.status(200).json({ message: 'Hello world!' });
 }
