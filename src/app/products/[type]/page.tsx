@@ -33,13 +33,16 @@ export default function Products (props: any) {
   }, [prodType]);
 
   const [filteredProducts, setFilteredProducts] = useState(data.product); // estado para armazenar a lista filtrada de produtos
+
   const handleFilter = (type: string) => {
     // Função de callback para filtrar os produtos com base no tipo
-    const filteredProducts = data.product.filter((product) => product.type === product.type);
+    const filteredProducts = data.product.filter((product) => product.type === type);
     setFilteredProducts(data.product); // atualiza o estado com a lista filtrada de produtos
   };
 
-  function best(size: string) {}
+  function best(size: string) {
+    
+  }
 
   function handleResetClick() {
     console.log("resetou");

@@ -23,12 +23,12 @@ export default function PageProduct(props: any) {
                     key={element.id}
                     src={element.image}
                     alt={element.type}
-                    className="w-full h-[40rem] rounded-3xl"
+                    className="w-full lg:h-[40rem] xs:h-[18rem] rounded-3xl"
                   />
-                  <div className="flex flex-col gap-6 w-2/6">
+                  <div className="flex flex-col justify-center lg:items-start xs:items-center gap-6 w-2/6">
                     <h2 className="font-bold text-2xl">{element.title}</h2>
                     <p className="text-xl">U${element.price}</p>
-                    <div className="flex gap-2">
+                    <div className="flex lg:flex-row xs:flex-row justify-center gap-2">
                       <input
                         type="button"
                         value="Add to cart"
@@ -44,13 +44,14 @@ export default function PageProduct(props: any) {
                 </>
               ))}
           </div>
-          <div className="flex justify-center items-center">
-            <p className="indent-12 xs:w-5/6 lg:w-3/6 ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
-              corporis harum, unde quisquam facere nulla neque quas provident
-              voluptatibus blanditiis officia consequuntur, repellat quod enim!
-              Ea, possimus? Obcaecati, architecto libero.
-            </p>
+          <div className="flex justify-center items-center"> 
+            {data.product
+              .filter((element) => element.id == prodId)
+              .map((element) => (
+                <>
+                  <p className="xs:w-5/6 lg:w-full ">{element.desc}</p>
+                </>
+              ))}
           </div>
           <div className="flex flex-col justify-center items-center">
             <h3 className="mt-10 text-xl">Other products</h3>
