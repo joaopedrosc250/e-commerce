@@ -8,7 +8,7 @@ import {
 
 import { Request, Response } from "express";
 
-export default async function handle(req: Request, res: Response) {
+export default async function GET(req: Request, res: Response) {
   try {
     switch (req.method) {
       case "GET": {
