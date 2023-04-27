@@ -1,5 +1,5 @@
-import { Request, Response } from "express"; // Importe os tipos corretos para as requisições e respostas
+import { Response } from "express";
 
-export function Request(Res: Response) {
-  return new Response('Hello world!')
+export function handleRequest(res: Response) {
+  return res.send('Hello world!');
 }
