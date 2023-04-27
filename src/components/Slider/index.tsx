@@ -1,6 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export const Slider = () => {
+
   const images = [
     "/model-5.jpg",
     "/model-8.jpg",
@@ -13,14 +15,19 @@ export const Slider = () => {
       <div className="flex lg:flex-row justify-center overflow-hidden">
         <div className="flex xs:p-4 items-center lg:h-[38rem]">
           {images.map((image) => (
-            <div className="h-full hover:scale-105 hover:pl-2 hover:pr-2 transition-all" key={image}>
-              <Image
-                src={image}
-                alt="image"
-                width={1920}
-                height={1080}
-                className="w-full cursor-pointer h-full hover:rounded-3xl transition-all"
-              />
+            <div
+              className="h-full hover:scale-105 hover:pl-2 hover:pr-2 transition-all"
+              key={image}
+            >
+              <Link href={"/pageproduct"}>
+                <Image
+                  src={image}
+                  alt="image"
+                  width={1920}
+                  height={1080}
+                  className="w-full cursor-pointer h-full hover:rounded-3xl transition-all"
+                />
+              </Link>
             </div>
           ))}
         </div>

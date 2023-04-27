@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-
 interface InputProps {
   url: string;
   id: string;

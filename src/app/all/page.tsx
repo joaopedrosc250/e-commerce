@@ -5,244 +5,9 @@ import { Product } from "@/components/Product";
 import { useState } from "react";
 import Link from "next/link";
 import { Nav } from "@/components/Nav";
+import data from "../utils/data";
 
 export default function All() {
-
-  const product = [
-    /* best-sellers */
-
-    {
-      title: "t-shirt-1",
-      type: "best",
-      id: "1",
-      url: "/pageproduct",
-      size: "G",
-      image: "./t-shirt-1.jpg",
-      price: 54.95,
-    },
-    {
-      title: "t-shirt-2",
-      id: "2",
-      type: "best",
-      url: "/pageproduct",
-      size: "G",
-      image: "t-shirt-2.jpg",
-      price: 60.95,
-    },
-    {
-      title: "t-shirt-3",
-      type: "best",
-      id: "1",
-      url: "/pageproduct",
-      size: "G",
-      image: "./t-shirt-3.jpg",
-      price: 54.95,
-    },
-    {
-      title: "t-shrit-4",
-      id: "2",
-      type: "best",
-      url: "/pageproduct",
-      size: "G",
-      image: "cap-1.jpg",
-      price: 60.95,
-    },
-
-    /* t-shirts 👕 */
-
-    {
-      title: "t-shirt-1",
-      type: "tshirt",
-      id: "1",
-      url: "/pageproduct",
-      size: "G",
-      image: "/t-shirt-1.jpg",
-      price: 54.95,
-    },
-    {
-      title: "t-shrit-2",
-      id: "2",
-      type: "tshirt",
-      url: "/pageproduct",
-      size: "G",
-      image: "/t-shirt-2.jpg",
-      price: 60.95,
-    },
-    {
-      title: "t-shirt-3",
-      id: "3",
-      type: "tshirt",
-      url: "/pageproduct",
-      size: "M",
-      image: "/t-shirt-3.jpg",
-      price: 67.8,
-    },
-    {
-      title: "t-shirt-4",
-      id: "4",
-      type: "tshirt",
-      url: "/pageproduct",
-      size: "G",
-      image: "/t-shirt-1.jpg",
-      price: 150,
-    },
-    {
-      title: "t-shirt-5",
-      id: "5",
-      type: "tshirt",
-      url: "/pageproduct",
-      size: "G",
-      image: "/t-shirt-1.jpg",
-      price: 130.99,
-    },
-    {
-      title: "t-shirt-6",
-      id: "6",
-      type: "tshirt",
-      url: "/pageproduct",
-      size: "G",
-      image: "/t-shirt-3.jpg",
-      price: 130,
-    },
-    {
-      title: "t-shirt-7",
-      id: "7",
-      type: "tshirt",
-      url: "/pageproduct",
-      size: "G",
-      image: "/t-shirt-2.jpg",
-      price: 155,
-    },
-    {
-      title: "t-shirt-8",
-      id: "8",
-      type: "tshirt",
-      url: "/pageproduct",
-      size: "G",
-      image: "/t-shirt-3.jpg",
-      price: 130,
-    },
-    {
-      title: "t-shirt-9",
-      id: "9",
-      type: "tshirt",
-      url: "/pageproduct",
-      size: "G",
-      image: "/t-shirt-2.jpg",
-      price: 125,
-    },
-    {
-      title: "t-shirt-10",
-      id: "10",
-      type: "tshirt",
-      url: "/pageproduct",
-      size: "G",
-      image: "/t-shirt-2.jpg",
-      price: 125,
-    },
-    {
-      title: "t-shirt-11",
-      id: "11",
-      type: "tshirt",
-      url: "/pageproduct",
-      size: "G",
-      image: "/t-shirt-3.jpg",
-      price: 130,
-    },
-    {
-      title: "t-shirt-12",
-      id: "12",
-      type: "tshirt",
-      url: "/pageproduct",
-      size: "G",
-      image: "/t-shirt-3.jpg",
-      price: 129.9,
-    },
-    {
-      title: "t-shirt-13",
-      id: "13",
-      type: "tshirt",
-      url: "/pageproduct",
-      size: "G",
-      image: "/t-shirt-2.jpg",
-      price: 137,
-    },
-
-    /* caps 🧢 */
-
-    {
-      title: "cap-1",
-      id: "1",
-      type: "cap",
-      url: "/pageproduct",
-      image: "/cap-1.jpg",
-      price: 69.9,
-    },
-    {
-      title: "cap-2",
-      id: "1",
-      type: "cap",
-      url: "/pageproduct",
-      image: "/cap-1.jpg",
-      price: 74.95,
-    },
-    {
-      title: "cap-3",
-      id: "1",
-      type: "cap",
-      url: "/pageproduct",
-      image: "/cap-1.jpg",
-      price: 89.99,
-    },
-    {
-      title: "cap-4",
-      id: "1",
-      type: "cap",
-      url: "/pageproduct",
-      image: "/cap-1.jpg",
-      price: 67.8,
-    },
-
-    /* Shoe 👟 */
-
-    {
-      title: "shoe-1",
-      id: "1",
-      type: "shoe",
-      url: "/pageproduct",
-      image: "/shoe-1-1.png",
-      price: 69.99,
-    },
-
-    {
-      title: "shoe-1",
-      id: "1",
-      type: "shoe",
-      url: "/pageproduct",
-      image: "/shoe-1.jpg",
-      price: 69.99,
-    },
-
-    {
-      title: "shoe-1",
-      id: "1",
-      type: "shoe",
-      url: "/pageproduct",
-      image: "/shoe-1-2.png",
-      price: 69.99,
-    },
-
-    {
-      title: "shoe-1",
-      id: "1",
-      type: "shoe",
-      url: "/pageproduct",
-      image: "/shoe-1-3.png",
-      price: 69.99,
-    },
-  ];
-
-
   interface Props {
     best: () => void;
     onReset: () => void;
@@ -250,7 +15,7 @@ export default function All() {
     higherPrice: () => void;
   }
 
-  const [tshirt, setTshirts] = useState(product);
+  const [tshirt, setTshirts] = useState(data.product);
 
   return (
     <div className="flex flex-col bg-white text-black">
@@ -278,7 +43,7 @@ export default function All() {
           <div className="grid justify-items-center mt-16">
             <h3 className="font-bold">T-shirts</h3>
             <div className="grid items-center lg:gap-10 xs:gap-20 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
-              {product
+              {data.product
                 .filter((element) => element.type == "tshirt")
                 .slice(0, 4)
                 .map(
@@ -309,7 +74,7 @@ export default function All() {
           <div id="caps" className="grid justify-items-center">
             <h3 className="mt-16 font-bold">Caps</h3>
             <div className="grid items-center lg:gap-10 xs:gap-20 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
-              {product
+              {data.product
                 .filter((element) => element.type == "cap")
                 .map((element) => (
                   <Product
@@ -335,7 +100,7 @@ export default function All() {
           <div id="shoes" className="grid justify-items-center mb-24">
             <h3 className="mt-16 font-bold">Shoes</h3>
             <div className="grid justify-items-center lg:gap-10 xs:gap-20 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
-              {product
+              {data.product
                 .filter((element) => element.type == "shoe")
                 .map((element) => (
                   <Product

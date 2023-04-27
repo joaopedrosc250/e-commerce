@@ -1,6 +1,9 @@
+
+-- Criando o banco
+
 CREATE TABLE products (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(255),
+    title VARCHAR(100), --string com limite de caracteres
     type VARCHAR(255),
     url VARCHAR(255),
     size VARCHAR(10),
