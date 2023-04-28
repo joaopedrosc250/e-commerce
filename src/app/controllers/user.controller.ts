@@ -1,16 +1,16 @@
-export const getAllUser = async () => {
+const getAllUser = async () => {
   const users = await prisma.user.findMany({});
   return users;
 };
 
-export const getUser = async (id: any) => {
+const getUser = async (id: any) => {
   const user = await prisma.user.findUnique({
     where: { id },
   });
   return user;
 };
 
-export const createUser = async (name: string, email: string) => {
+const createUser = async (name: string, email: string) => {
   const user = await prisma.user.create({
     data: {
       name,
@@ -20,7 +20,7 @@ export const createUser = async (name: string, email: string) => {
   return user;
 };
 
-export const updateUser = async (id: any, updateData: any) => {
+const updateUser = async (id: any, updateData: any) => {
   const user = await prisma.user.update({
     where: {
       id,
@@ -30,7 +30,7 @@ export const updateUser = async (id: any, updateData: any) => {
   return user;
 };
 
-export const deleteUser = async (id: any) => {
+const deleteUser = async (id: any) => {
   const user = await prisma.user.delete({ where: { id } });
   return user;
 };

@@ -1,4 +1,5 @@
 const data = {
+
   product: [
     /* best-sellers */
     {
@@ -258,5 +259,13 @@ const data = {
     },
   ],
 };
+
+  user: [
+    {
+      id: 1,
+      name:'Lucas',
+      email:'amaralrdev@gmail.com',
+    }
+  ]
 
 export default data;

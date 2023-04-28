@@ -1,16 +1,16 @@
-export const getAllProduct = async () => {
+const getAllProduct = async () => {
   const products = await prisma.product.findMany({});
   return products;
 };
 
-export const getProduct = async (id: any) => {
+ const getProduct = async (id: any) => {
   const product = await prisma.product.findUnique({
     where: { id },
   });
   return product;
 };
 
-export const createProduct = async (
+const createProduct = async (
   type: string,
   title: string,
   url: string,
@@ -33,7 +33,7 @@ export const createProduct = async (
   return product;
 };
 
-export const updateProduct = async (id: any, updateData: any) => {
+const updateProduct = async (id: any, updateData: any) => {
   const product = await prisma.product.update({
     where: {
       id,
@@ -43,7 +43,7 @@ export const updateProduct = async (id: any, updateData: any) => {
   return product;
 };
 
-export const deleteProduct = async (id: any) => {
+const deleteProduct = async (id: any) => {
   const product = await prisma.product.delete({ where: { id } });
   return product;
 };
