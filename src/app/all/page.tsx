@@ -27,14 +27,14 @@ export default function All() {
             <ul className="flex flex-col gap-2 justify-center items-center">
               <li>
                 <a href="#tshirts" className="">
-                  T-shirts 👕
+                  T-shirts 
                 </a>
               </li>
               <li>
-                <a href="#caps">Caps 🧢</a>
+                <a href="#caps">Caps </a>
               </li>
               <li>
-                <a href="#shoes">Shoes 👟</a>
+                <a href="#shoes">Shoes </a>
               </li>
             </ul>
           </nav>

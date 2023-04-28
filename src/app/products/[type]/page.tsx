@@ -24,11 +24,11 @@ export default function Products (props: any) {
 
   useEffect(() => {
     if (prodType === "tshirt") {
-      setTitle("T-shirts 👕");
+      setTitle("T-shirts");
     } else if (prodType === "cap") {
-      setTitle("Caps 🧢");
+      setTitle("Caps ");
     } else if (prodType === "shoe") {
-      setTitle("Shoes 👟");
+      setTitle("Shoes ");
     }
   }, [prodType]);
 
