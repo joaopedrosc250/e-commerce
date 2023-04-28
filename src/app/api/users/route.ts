@@ -37,7 +37,7 @@ const deleteUser = async (id: any) => {
 
 import { Request, Response } from "express";
 
-export default async function handle(req: Request, res: Response) {
+export default async function handler (req: Request, res: Response) {
   try {
     switch (req.method) {
       case "GET": {
