@@ -3,6 +3,7 @@ import { Nav } from "@/components/Nav";
 import { Product } from "@/components/Product";
 import Image from "next/image";
 import data from "../../utils/data";
+import Link from "next/link";
 
 export default function PageProduct(props: any) {
   const prodId = props.params.id;
@@ -25,31 +26,36 @@ export default function PageProduct(props: any) {
                     alt={element.type}
                     className="w-full lg:h-[40rem] xs:h-[18rem] rounded-3xl"
                   />
-                  <div className="flex flex-col justify-center lg:items-start xs:items-center gap-6 w-2/6">
+                  <div className="flex flex-col justify-center lg:items-start xs:items-center gap-4 w-2/6">
                     <h2 className="font-bold text-2xl">{element.title}</h2>
                     <p className="text-xl">U${element.price}</p>
+                    <p className="text-xl text-lime-500">In stock</p>
                     <div className="flex lg:flex-row xs:flex-row justify-center gap-2">
-                      <input
+                      <Link
                         type="button"
-                        value="Add to cart"
-                        className="bg-zinc-200 p-2 rounded-3xl hover:rounded-none transition-all"
-                      />
-                      <input
+                        href="/bag"
+                        className="bg-zinc-200 p-2 flex justify-center items-center text-center rounded-3xl hover:rounded-none transition-all"
+                      >
+                        Add to bag
+                      </Link>
+                      <Link
                         type="button"
-                        value="Finish"
-                        className="bg-zinc-200 p-2 rounded-3xl hover:rounded-none transition-all"
-                      />
+                        href="/bag"
+                        className="bg-zinc-200 p-2 flex justify-center items-center rounded-3xl hover:rounded-none transition-all"
+                      >
+                        Finish
+                      </Link>
                     </div>
                   </div>
                 </>
               ))}
           </div>
-          <div className="flex justify-center items-center"> 
+          <div className="flex justify-center items-center">
             {data.product
               .filter((element) => element.id == prodId)
               .map((element) => (
                 <>
-                  <p className="xs:w-5/6 lg:w-full ">{element.desc}</p>
+                  <p className="xs:w-5/6 lg:w-full text-xl">{element.desc}</p>
                 </>
               ))}
           </div>

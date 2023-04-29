@@ -7,7 +7,7 @@ interface InputProps {
   title: string;
 }
 
-export const ProductSearch = ({ url, id, title}: InputProps) => {
+export const ProductSearch = ({ url, id, title }: InputProps) => {
   return (
     <div key={id} className="flex flex-row justify-end gap-10 ">
       <Link href={url} className="hover:bg-slate-200">

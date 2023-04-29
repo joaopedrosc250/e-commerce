@@ -58,7 +58,7 @@ export const Nav = () => {
             <li>
               <Link
                 className="hover:underline hover:underline-offset-4 "
-                href="#"
+                href="/fav"
               >
                 <Image
                   width={40}

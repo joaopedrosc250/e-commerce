@@ -7,7 +7,7 @@ export const Slider = () => {
     "/model-5.jpg",
     "/model-8.jpg",
     "/model-7.jpg",
-    "/model-3.jpg",
+    "/model-6.jpg",
   ];
 
   return (

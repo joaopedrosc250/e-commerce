@@ -27,7 +27,7 @@ export default function All() {
             <ul className="flex flex-col gap-2 justify-center items-center">
               <li>
                 <a href="#tshirts" className="">
-                  T-shirts 
+                  T-shirts
                 </a>
               </li>
               <li>
@@ -97,7 +97,7 @@ export default function All() {
             <div className="grid justify-items-center lg:gap-10 xs:gap-20 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
               {data.product
                 .filter((element) => element.type == "shoe")
-                .slice(0,4)
+                .slice(0, 4)
                 .map((element) => (
                   <Product
                     url={element.url}
@@ -121,4 +121,4 @@ export default function All() {
       <Footer />
     </div>
   );
-};
+}
