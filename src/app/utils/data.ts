@@ -90,7 +90,7 @@ const data = {
       id: "5",
       type: "tshirt",
       url: "/pageproduct/5",
-      size: "G",
+      size: "P",
       image: "/t-shirt-1.jpg",
       price: 130.99,
       desc: "A comfortable and stylish t-shirt.",
@@ -100,7 +100,7 @@ const data = {
       id: "6",
       type: "tshirt",
       url: "/pageproduct/6",
-      size: "G",
+      size: "P",
       image: "/t-shirt-3.jpg",
       price: 130,
       desc: "A comfortable and stylish t-shirt.",
@@ -121,7 +121,7 @@ const data = {
       id: "8",
       type: "tshirt",
       url: "/pageproduct/8",
-      size: "G",
+      size: "P",
       image: "/t-shirt-3.jpg",
       desc: "Add some edge to your wardrobe with this stylish t-shirt. Featuring a unique graphic print on the front and a comfortable fit, this t-shirt is perfect for those who want to stand out from the crowd.",
       price: 130,
@@ -141,7 +141,7 @@ const data = {
       id: "10",
       type: "tshirt",
       url: "/pageproduct/10",
-      size: "G",
+      size: "P",
       image: "/t-shirt-2.jpg",
       desc: "Keep it casual and comfortable with this classic cotton t-shirt. Featuring a relaxed fit and a simple design, this t-shirt is perfect for everyday wear.",
       price: 125,
@@ -151,7 +151,7 @@ const data = {
       id: "11",
       type: "tshirt",
       url: "/pageproduct/11",
-      size: "G",
+      size: "P",
       image: "/t-shirt-3.jpg",
       desc: "Make a statement with this bold graphic t-shirt. Featuring a unique design on the front and a comfortable fit, this t-shirt is perfect for those who want to express their individuality.",
       price: 130,
@@ -161,7 +161,7 @@ const data = {
       id: "12",
       type: "tshirt",
       url: "/pageproduct/12",
-      size: "G",
+      size: "M",
       image: "/t-shirt-3.jpg",
       desc: "Elevate your style with this sophisticated t-shirt. Featuring a minimalistic design and a high-quality construction, this t-shirt is perfect for any occasion.",
       price: 129.9,
@@ -171,21 +171,20 @@ const data = {
       id: "13",
       type: "tshirt",
       url: "/pageproduct/13",
-      size: "G",
+      size: "M",
       image: "/t-shirt-2.jpg",
       desc: "Step up your fashion game with this trendy t-shirt. Featuring a unique graphic print and a comfortable fit, this t-shirt is perfect for those who want to make a statement.",
       price: 137,
     },
 
     /* Cap 🧢 */
-
     {
       title: "cap-1",
       id: "14",
       type: "cap",
       url: "/pageproduct/14",
       image: "/cap-1.jpg",
-      price: 69.9,
+      price: 59.9,
       desc: "Stay cool and stylish with our trendy cap-1. Made from high-quality materials, it's perfect for any casual occasion. Available in different colors.",
     },
     {
@@ -194,7 +193,7 @@ const data = {
       type: "cap",
       url: "/pageproduct/15",
       image: "/cap-1.jpg",
-      price: 74.95,
+      price: 54.95,
       desc: "Make a statement with our cap-2. Featuring a unique design and comfortable fit, it's a must-have accessory for any fashion-forward individual.",
     },
     {
@@ -203,7 +202,7 @@ const data = {
       type: "cap",
       url: "/pageproduct/16",
       image: "/cap-1.jpg",
-      price: 89.99,
+      price: 99.99,
       desc: "Upgrade your style game with our premium cap-3. Crafted from the finest materials and designed with attention to detail, it's the perfect accessory to complete your look.",
     },
     {
@@ -212,42 +211,41 @@ const data = {
       type: "cap",
       url: "/pageproduct/17",
       image: "/cap-1.jpg",
-      price: 67.8,
+      price: 57.8,
       desc: "Add a touch of sophistication to your outfit with our classic cap-4. Made from durable materials, it's perfect for everyday wear and can be dressed up or down.",
     },
-
+    
     /* Shoe 👟 */
-
     {
       title: "shoe-1",
       id: "18",
       type: "shoe",
       url: "/pageproduct/18",
       image: "/jordan-3.jpg",
-      price: 69.99,
+      price: 85.99,
       desc: "Step up your sneaker game with our shoe-1. Featuring a sleek design and comfortable fit, it's perfect for any casual occasion.",
     },
-
+    
     {
       title: "shoe-2",
       id: "19",
       type: "shoe",
       url: "/pageproduct/19",
       image: "/shoe-1.jpg",
-      price: 69.99,
+      price: 127.99,
       desc: "Stay on-trend with our shoe-2. Designed with both style and comfort in mind, it's the perfect addition to your footwear collection.",
     },
-
+    
     {
       title: "shoe-3",
       id: "20",
       type: "shoe",
       url: "/pageproduct/20",
       image: "/jordan-3.jpg",
-      price: 69.99,
+      price: 65.50,
       desc: "Get ready to turn heads with our shoe-3. Featuring a bold design and premium materials, it's a must-have for any sneaker enthusiast.",
     },
-
+    
     {
       title: "shoe-4",
       id: "21",
@@ -255,8 +253,18 @@ const data = {
       url: "/pageproduct/21",
       image: "/court-1.jpg",
       desc: "Elevate your style with our shoe-4. Made from high-quality materials and designed with attention to detail, it's the perfect shoe for any occasion.",
-      price: 69.99,
-    },
+      price: 104.99,
+    },   
+     
+    {
+      title: "shoe-5",
+      id: "26",
+      type: "shoe",
+      url: "/pageproduct/26",
+      image: "/allstart-1.jpg",
+      desc: "Elevate your style with our shoe-4. Made from high-quality materials and designed with attention to detail, it's the perfect shoe for any occasion.",
+      price: 104.99,
+    },    
   ],
 };
 

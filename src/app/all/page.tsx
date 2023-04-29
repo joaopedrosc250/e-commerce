@@ -60,9 +60,6 @@ export default function All() {
                     />
                   )
                 )}
-              <span className={`${tshirt.length != 0 ? "hidden" : "block"}`}>
-                empty
-              </span>
             </div>
             <Link
               href="/products/tshirt"
@@ -76,6 +73,7 @@ export default function All() {
             <div className="grid items-center lg:gap-10 xs:gap-20 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
               {data.product
                 .filter((element) => element.type == "cap")
+                .slice(0, 4)
                 .map((element) => (
                   <Product
                     url={element.url}
@@ -86,9 +84,6 @@ export default function All() {
                     price={element.price}
                   />
                 ))}
-              <span className={`${tshirt.length != 0 ? "hidden" : "block"}`}>
-                empty
-              </span>
             </div>
             <Link
               href="/products/cap"
@@ -102,6 +97,7 @@ export default function All() {
             <div className="grid justify-items-center lg:gap-10 xs:gap-20 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
               {data.product
                 .filter((element) => element.type == "shoe")
+                .slice(0,4)
                 .map((element) => (
                   <Product
                     url={element.url}
@@ -112,9 +108,6 @@ export default function All() {
                     price={element.price}
                   />
                 ))}
-              <span className={`${tshirt.length != 0 ? "hidden" : "block"}`}>
-                empty
-              </span>
             </div>
             <Link
               href="/products/shoe"

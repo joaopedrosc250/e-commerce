@@ -1,28 +1,24 @@
 import React, { useState } from "react";
-
 interface Props {
-  best?: (size: string) => void;
+  Best?: (size: string) => void;
   onReset: () => void;
   lowestPrice: (minPrice: number, maxPrice: number) => void;
   higherPrice: (minPrice: number, maxPrice: number) => void;
 }
 
 export const Filter = (props: Props) => {
-  const { best, onReset, lowestPrice, higherPrice } = props;
+  const { Best, onReset, lowestPrice, higherPrice } = props;
 
   function handleResetClick() {
     onReset();
   }
 
+  /* Verifica se no produto existe a propriedade size */
   const [size, setSize] = useState("");
 
-  const handleSizeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSize(event.target.value);
-  };
-
   const handleBestClick = () => {
-    if (!best) return;
-    best(size ? size : "");
+    if (!Best) return;
+    Best(size ? size : "");
   };
 
   return (
@@ -30,10 +26,10 @@ export const Filter = (props: Props) => {
       <h2 className="font-bold flex justify-start">Filter by:</h2>
       <div className="grid gap-1 justify-items-start">
         <h4 className="flex">Filter by size:</h4>
-        {best ? (
+        {Best ? (
           <>
             <button
-              onClick={() => best("P")}
+              onClick={() => Best("P")}
               type="button"
               value="Filter"
               className="flex justify-center items-center rounded-xl w-1/6 hover:text-black hover:bg-white bg-zinc-700 text-white"
@@ -41,7 +37,7 @@ export const Filter = (props: Props) => {
               P
             </button>
             <button
-              onClick={() => best("M")}
+              onClick={() => Best("M")}
               type="button"
               value="Filter"
               className="flex justify-center items-center rounded-xl w-1/6 hover:text-black hover:bg-white bg-zinc-700 text-white"
@@ -49,7 +45,7 @@ export const Filter = (props: Props) => {
               M
             </button>
             <button
-              onClick={() => best("G")}
+              onClick={() => Best("G")}
               type="button"
               value="Filter"
               className="flex justify-center items-center rounded-xl w-1/6 hover:text-black hover:bg-white bg-zinc-700 text-white"
@@ -57,7 +53,7 @@ export const Filter = (props: Props) => {
               G
             </button>
           </>
-        ) : null}
+        ) : null }
       </div>
       <div className="grid gap-1 justify-items-start">
         <h4 className="flex justify-center">Filter by price:</h4>

@@ -35,6 +35,7 @@ export default function Main() {
               {data.product
                 .filter((element) => element.type == "tshirt")
                 .slice(0, 4)
+                .sort(() => Math.random() - 0.5)
                 .map((element) => (
                   <Product
                     url={element.url}
@@ -53,6 +54,7 @@ export default function Main() {
               {data.product
                 .filter((element) => element.type == "cap")
                 .slice(0, 4)
+                .sort(() => Math.random() - 0.5)
                 .map((element) => (
                   <Product
                     url={element.url}
@@ -71,6 +73,7 @@ export default function Main() {
               {data.product
                 .filter((element) => element.type == "shoe")
                 .slice(0, 4)
+                .sort(() => Math.random() - 0.5)
                 .map((element) => (
                   <Product
                     url={element.url}

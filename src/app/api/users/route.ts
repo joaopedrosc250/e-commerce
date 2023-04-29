@@ -1,3 +1,5 @@
+import { Request, Response } from "express";
+
 const getAllUser = async () => {
   const users = await prisma.user.findMany({});
   return users;
@@ -34,8 +36,6 @@ const deleteUser = async (id: any) => {
   const user = await prisma.user.delete({ where: { id } });
   return user;
 };
-
-import { Request, Response } from "express";
 
 export default async function handler (req: Request, res: Response) {
   try {
