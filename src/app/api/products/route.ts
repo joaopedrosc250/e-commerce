@@ -78,7 +78,7 @@ export default async function handler (req: Request, res: Response) {
       case "PUT": {
         const { id, ...updateData } = req.body;
         const product = await updateProduct(id, updateData);
-        return product.status(200).json(product);
+        return res.status(200).json(product);
       }
       case "DELETE": {
         const { id } = req.body;
