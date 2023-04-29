@@ -1,15 +1,15 @@
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import FilterSearch from "../FilterSearch";
 
 export const Search = () => {
+  
+
   return (
     <div id="search-box" className="flex flex-row justify-center items-center">
       <div className="flex box-border gap-2">
-        <input
-          type="text"
-          placeholder="Search..."
-          className="border-none bg-none outline-none p-0 transition-all duration-500 focus:outline-zinc-200 focus:rounded-2xl focus:px-3 focus:shadow-2xl focus:bg-zinc-50 w-full"
-        />
+       <FilterSearch />
         <Link href="">
           <Image
             width={33}

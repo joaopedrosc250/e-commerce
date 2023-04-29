@@ -69,7 +69,7 @@ export const Nav = () => {
                 />
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 className="hover:underline hover:underline-offset-4 "
                 href="/profile/1"
@@ -82,7 +82,7 @@ export const Nav = () => {
                   alt="bag"
                 />
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
