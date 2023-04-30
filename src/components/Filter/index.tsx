@@ -1,12 +1,7 @@
+import { FunctionProps } from "@/types/filter";
 import React, { useState } from "react";
-interface Props {
-  Best?: (size: string) => void;
-  onReset: () => void;
-  lowestPrice: (minPrice: number, maxPrice: number) => void;
-  higherPrice: (minPrice: number, maxPrice: number) => void;
-}
 
-export const Filter = (props: Props) => {
+export const Filter = (props: FunctionProps) => {
   const { Best, onReset, lowestPrice, higherPrice } = props;
 
   function handleResetClick() {

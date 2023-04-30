@@ -51,7 +51,7 @@ const data = {
       id: "1",
       url: "/pageproduct/1",
       size: "G",
-      image: "/t-shirt-1.jpg",
+      image: "/t-shirt-4.jpg",
       price: 54.95,
       desc: "A comfortable and stylish t-shirt.",
     },

@@ -1,14 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-interface InputProps {
-  url: string;
-  id: string;
-  image: string;
-  title: string;
-  price: number;
-}
+import { ProductProps } from "@/types/product";
 
-export const Product = ({ url, id, image, title, price }: InputProps) => {
+export const Product = ({ url, id, image, title, price }: ProductProps) => {
   return (
     <div key={id} className="grid justify-items-center">
       <Link href={url} className="grid justify-items-center gap-2">
