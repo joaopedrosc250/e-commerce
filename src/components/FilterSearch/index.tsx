@@ -22,7 +22,7 @@ function FilterSearch() {
         onBlur={handleOff}
         className="border-none bg-none outline-none p-0 transition-all duration-500 focus:outline-zinc-200 focus:rounded-2xl focus:px-3 focus:shadow-2xl focus:bg-zinc-50 w-full"
       />
-      <div
+      {/* <div
         className={
           showResults
             ? "absolute mt-4 flex flex-col gap-2 bg-white w-3/4 justify-start items-start p-2 border rounded-2xl"
@@ -37,7 +37,7 @@ function FilterSearch() {
             title={element.title}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

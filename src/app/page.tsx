@@ -4,7 +4,6 @@ import { Product } from "@/components/Product";
 import { Slider } from "@/components/Slider";
 import Link from "next/link";
 import data from "./utils/data";
-import Best from "@/components/Best";
 
 export default function Main() {
   return (
@@ -13,7 +12,6 @@ export default function Main() {
       <Slider />
       <div className="xs:h-auto grid xs:grid-cols-1 p-20 lg:grid-cols-4 gap-24 lg:h-auto">
         <div className="xs:col-span-1 lg:col-span-4 ">
-          <Best />
           <div className="grid  justify-items-center">
             <h3 className="mt-16">T-shirts</h3>
             <div className="grid items-center lg:gap-16 xs:gap-20 w-5/6 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">

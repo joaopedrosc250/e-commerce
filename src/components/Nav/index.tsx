@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Search } from "../Search";
-import Image from "next/image";
 
 export const Nav = () => {
   return (
@@ -43,46 +42,22 @@ export const Nav = () => {
             </li>
             <li>
               <Link
-                className="hover:underline hover:underline-offset-4 "
+                className="fa fa-shopping-bag scale-125 hover:underline hover:underline-offset-4 "
                 href="/bag"
-              >
-                <Image
-                  width={32}
-                  height={40}
-                  src={"/bag.png"}
-                  className="hover:scale-125 transition-all"
-                  alt="bag"
-                />
-              </Link>
+              ></Link>
             </li>
             <li>
               <Link
-                className="hover:underline hover:underline-offset-4 "
+                className="fa fa-heart scale-125 hover:underline hover:underline-offset-4 "
                 href="/fav"
-              >
-                <Image
-                  width={40}
-                  height={40}
-                  src={"/love-icon.png"}
-                  className="hover:scale-125 transition-all"
-                  alt="bag"
-                />
-              </Link>
+              ></Link>
             </li>
-            {/* <li>
+            <li>
               <Link
-                className="hover:underline hover:underline-offset-4 "
+                className="fa fa-user scale-125 hover:underline hover:underline-offset-4 "
                 href="/profile/1"
-              >
-                <Image
-                  width={40}
-                  height={40}
-                  src={"/profile.png"}
-                  className="hover:scale-125 transition-all"
-                  alt="bag"
-                />
-              </Link>
-            </li> */}
+              ></Link>
+            </li>
           </ul>
         </div>
       </div>

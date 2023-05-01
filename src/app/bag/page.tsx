@@ -1,7 +1,6 @@
 import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
 import { Product } from "@/components/Product";
-import Image from "next/image";
 import data from "../utils/data";
 
 export default function Bag() {
@@ -11,8 +10,7 @@ export default function Bag() {
       <div className="flex lg:flex-row xs:flex-col justify-center gap-20 items-center w-full h-full">
         <div className="flex flex-col justify-center items-center gap-14">
           <div className="flex flex-row gap-2 justify-center items-center">
-            <h2 className="font-bold text-3xl">Bag</h2>
-            <Image width={40} height={45} src={"/bag.png"} alt="bag" />
+            <span className="font-bold text-3xl fa fa-shopping-bag scale-150"></span>
           </div>
           <div className="bg-slate-100 rounded-3xl lg:p-[20rem] xs:p-[10rem]">
             aaa
