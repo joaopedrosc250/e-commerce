@@ -9,7 +9,7 @@ export default function Profile(props: any) {
       <Nav />
       <div className="flex flex-col justify-center items-center h-screen">
         <div className="bg-zinc-100 grid grid-cols-2 border rounded-t-2xl p-2 lg:w-1/4 xs:w-2/4 text-center">
-          <h2>Lucas Amaral  <span className="font-bold">✏</span></h2>
+          <h2>user  <span className="font-bold">✏</span></h2>
           <p>Email  <span className="font-bold">✏</span></p>
         </div>
         <div className="bg-zinc-100 border p-40 lg:w-1/4 xs:w-2/4 text-center rounded-b-2xl ">aaa</div>
