@@ -5,7 +5,7 @@ const getAllProduct = async () => {
   return products;
 };
 
- const getProduct = async (id: any) => {
+const getProduct = async (id: any) => {
   const product = await prisma.product.findUnique({
     where: { id },
   });
@@ -50,7 +50,7 @@ const deleteProduct = async (id: any) => {
   return product;
 };
 
-export default async function handler (req: Request, res: Response) {
+export default async function handler(req: Request, res: Response) {
   try {
     switch (req.method) {
       case "GET": {

@@ -7,18 +7,7 @@ import { Product } from "@/components/Product";
 import { useEffect, useState } from "react";
 import data from "@/app/utils/data";
 
-interface ProductItem {
-  title: string;
-  type: string;
-  id: string;
-  url: string;
-  size: string;
-  image: string;
-  price: number;
-}
-
 export default function Products(props: any) {
-
   const [title, setTitle] = useState("");
   const [filteredProducts, setFilteredProducts] = useState(data.product); // estado para armazenar a lista filtrada de produtos
 
@@ -36,26 +25,29 @@ export default function Products(props: any) {
       setTitle("Shoes ");
     }
   }, [prodType]);
-  
 
   function Best(size: string) {
-    const filtered = data.product.filter((product) => product.size === size)
-    setFilteredProducts(filtered) 
+    const filtered = data.product.filter((product) => product.size === size);
+    setFilteredProducts(filtered);
   }
 
   function handleResetClick() {
     console.log("resetou");
-    setFilteredProducts(data.product)
+    setFilteredProducts(data.product);
   }
 
   function lowestPrice(minPrice: number, maxPrice: number) {
-    const filtered = data.product.filter((product) => product.price >= minPrice && product.price <= maxPrice);
-    setFilteredProducts(filtered)
+    const filtered = data.product.filter(
+      (product) => product.price >= minPrice && product.price <= maxPrice
+    );
+    setFilteredProducts(filtered);
   }
 
   function higherPrice(minPrice: number, maxPrice: number) {
-    const filtered = data.product.filter((product) => product.price >= minPrice && product.price <= maxPrice);
-    setFilteredProducts(filtered)
+    const filtered = data.product.filter(
+      (product) => product.price >= minPrice && product.price <= maxPrice
+    );
+    setFilteredProducts(filtered);
   }
 
   return (
@@ -75,7 +67,9 @@ export default function Products(props: any) {
             <h3 className="font-bold text-2xl mb-5">{title}</h3>
             <div className="grid items-center lg:gap-10 xs:gap-20 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
               {filteredProducts
-                .filter((element) => element.type == prodType || prodType === "all")
+                .filter(
+                  (element) => element.type == prodType || prodType === "all"
+                )
                 .map((element) => (
                   <Product
                     url={element.url}
