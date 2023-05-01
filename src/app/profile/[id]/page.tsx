@@ -12,7 +12,7 @@ export default function Profile(props: any) {
           <h2>User  <span className="font-bold">✏</span></h2>
           <p>Email  <span className="font-bold">✏</span></p>
         </div>
-        <div className="bg-zinc-100 border p-40 lg:w-1/4 xs:w-2/4 text-center rounded-b-2xl ">aaa</div>
+        <div className="bg-zinc-100 border p-40 lg:w-1/4 xs:w-2/4 text-center rounded-b-2xl ">history</div>
       </div>
     </div>
   );

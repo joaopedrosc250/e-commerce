@@ -1,6 +1,5 @@
 import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
-import { Product } from "@/components/Product";
 import Image from "next/image";
 import data from "../../utils/data";
 import Link from "next/link";

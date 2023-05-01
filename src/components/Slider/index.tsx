@@ -16,7 +16,7 @@ export const Slider = () => {
         <div className="flex xs:p-4 items-center lg:h-[35rem]">
           {images.map((image) => (
             <div
-              className="h-full hover:scale-105 hover:pl-2 hover:pr-2 transition-all"
+              className="h-full hover:scale-105 hover:pl-2 hover:pr-2 transition-all ease-in-out"
               key={image}
             >
               <Link href={"/pageproduct"}>
@@ -25,7 +25,7 @@ export const Slider = () => {
                   alt="image"
                   width={1920}
                   height={1080}
-                  className="w-full cursor-pointer h-full hover:rounded-3xl transition-all"
+                  className="w-full cursor-pointer h-full hover:rounded-3xl transition-all ease-in-out"
                 />
               </Link>
             </div>
