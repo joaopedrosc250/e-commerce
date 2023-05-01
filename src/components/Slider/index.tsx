@@ -13,7 +13,7 @@ export const Slider = () => {
   return (
     <div className="w-full">
       <div className="flex lg:flex-row justify-center overflow-hidden">
-        <div className="flex xs:p-4 items-center lg:h-[38rem]">
+        <div className="flex xs:p-4 items-center lg:h-[35rem]">
           {images.map((image) => (
             <div
               className="h-full hover:scale-105 hover:pl-2 hover:pr-2 transition-all"

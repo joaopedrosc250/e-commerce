@@ -55,12 +55,6 @@ export const Form = () => {
             </button>
           </form>
         </div>
-        <a
-          href="/"
-          className="text-white w-fit p-4 bg-black rounded-2xl hover:scale-110 hover:bg-white hover:text-black"
-        >
-          Back
-        </a>
       </div>
     </div>
   );
