@@ -227,7 +227,7 @@ const data = {
       title: "shoe-3",
       id: "20",
       type: "shoe",
-      url: "/pageproduct/20",
+      url: "/shop/pageproduct/20",
       image: "/jordan-3.jpg",
       price: 65.50,
       desc: "Get ready to turn heads with our shoe-3. Featuring a bold design and premium materials, it's a must-have for any sneaker enthusiast.",
