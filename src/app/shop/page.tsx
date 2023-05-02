@@ -98,7 +98,7 @@ export default function All() {
                 ))}
             </div>
             <Link
-              href="/shop/products/shoe"
+              href="/products/shoe"
               className="text-white bg-slate-900 p-2 w-fit rounded-3xl hover:rounded-none transition-all ease-in-out"
             >
               See more

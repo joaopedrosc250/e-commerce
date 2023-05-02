@@ -24,42 +24,8 @@ export const Nav = () => {
                 className="hover:underline hover:underline-offset-2 focus:outline-none"
                 href="/shop"
               >
-                Categories
+                Products
               </Link>
-            </li>
-            <li>
-              <Link
-                className="hover:underline hover:underline-offset-2"
-                href="#"
-              >
-                Sign in
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="font-bold hover:underline hover:underline-offset-2"
-                href="/sign"
-              >
-                Sign up
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="fa fa-shopping-cart scale-125 hover:underline hover:underline-offset-4 "
-                href="/shop/cart"
-              ></Link>
-            </li>
-            <li>
-              <Link
-                className="fa fa-heart scale-125 hover:underline hover:underline-offset-4 "
-                href="/shop/fav"
-              ></Link>
-            </li>
-            <li>
-              <Link
-                className="fa fa-user scale-125 hover:underline hover:underline-offset-4 "
-                href="/profile/1"
-              ></Link>
             </li>
           </ul>
         </div>
