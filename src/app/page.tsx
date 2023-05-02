@@ -72,7 +72,7 @@ export default function Main() {
           <div className="grid justify-items-center">
             <Link
               href="/all"
-              className="bg-zinc-900 text-white p-2 font-semibold rounded-3xl hover:scale-105 hover:shadow-2xl hover:rounded-none transition-all ease-in-out"
+              className="bg-zinc-900 text-white p-2 font-semibold rounded-3xl hover:scale-105 hover:rounded-none transition-all ease-in-out"
             >
               See all the products
             </Link>
