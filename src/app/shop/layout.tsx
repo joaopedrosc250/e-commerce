@@ -1,4 +1,3 @@
-import { Nav } from "@/components/Nav";
 import Head from "next/head";
 
 export const metadata = {
@@ -12,14 +11,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-br">
+    <>
       <Head>
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
       </Head>
-      <div className="">{children}</div>
-    </html>
+      <div>{children}</div>
+    </>
   );
 }
