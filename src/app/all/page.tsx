@@ -40,7 +40,7 @@ export default function All() {
           </nav>
         </div>
         <div id="tshirts" className="xs:col-span-1 lg:col-span-3">
-          <div className="grid justify-items-center mt-16">
+          <div className="grid justify-items-center mt-16 gap-4">
             <h3 className="font-bold">T-shirts</h3>
             <div className="grid items-center lg:gap-10 xs:gap-20 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
               {data.product
@@ -63,12 +63,12 @@ export default function All() {
             </div>
             <Link
               href="/products/tshirt"
-              className="border-2 bg-slate-100 p-2 w-fit rounded-3xl"
+              className="text-white bg-slate-900 p-2 w-fit rounded-3xl hover:rounded-none"
             >
               See more
             </Link>
           </div>
-          <div id="caps" className="grid justify-items-center">
+          <div id="caps" className="grid justify-items-center gap-4">
             <h3 className="mt-16 font-bold">Caps</h3>
             <div className="grid items-center lg:gap-10 xs:gap-20 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
               {data.product
@@ -87,12 +87,12 @@ export default function All() {
             </div>
             <Link
               href="/products/cap"
-              className="border-2 bg-slate-100 p-2 w-fit rounded-3xl"
+              className="text-white bg-slate-900 p-2 w-fit rounded-3xl hover:rounded-none"
             >
               See more
             </Link>
           </div>
-          <div id="shoes" className="grid justify-items-center mb-24">
+          <div id="shoes" className="grid justify-items-center mb-24 gap-4">
             <h3 className="mt-16 font-bold">Shoes</h3>
             <div className="grid justify-items-center lg:gap-10 xs:gap-20 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
               {data.product
@@ -111,7 +111,7 @@ export default function All() {
             </div>
             <Link
               href="/products/shoe"
-              className="flex justify-center border-2 bg-slate-100 p-2 w-fit rounded-3xl"
+              className="text-white bg-slate-900 p-2 w-fit rounded-3xl hover:rounded-none"
             >
               See more
             </Link>
