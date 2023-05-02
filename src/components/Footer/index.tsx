@@ -23,7 +23,7 @@ export const Footer = () => {
             <li>
               <a
                 className="hover:underline hover:underline-offset-1 transition-all"
-                href="/all"
+                href="/shop"
               >
                 Products
               </a>

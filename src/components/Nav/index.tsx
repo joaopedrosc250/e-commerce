@@ -3,13 +3,13 @@ import { Search } from "../Search";
 
 export const Nav = () => {
   return (
-    <div className="flex lg:flex-row xs:flex-col justify-center items-center lg:gap-40 xs:gap-0">
-      <div className="bg-white text-black flex lg:flex-row xs:flex-col lg:justify-around lg:items-center xs:justify-center xs:items-center p-2">
+    <div className="flex lg:flex-row xs:flex-col justify-center items-center lg:gap-40 xs:gap-0 bg-white text-black">
+      <div className="flex lg:flex-row xs:flex-col lg:justify-around lg:items-center xs:justify-center xs:items-center p-2">
         <div className="flex lg:flex-row xs:flex-col justify-center lg:gap-40 xs:gap-2 items-center">
           <div>
-            <a href="/" className="text-3xl">
+            <Link href="/" className="text-3xl">
               UrbanAvenue
-            </a>
+            </Link>
           </div>
           <div className="lg:relative md:relative xs:relative xs:p-2 md:p-4">
             <Search />
@@ -20,36 +20,39 @@ export const Nav = () => {
         <div className="flex lg:flex-row xs:flex-col xs:justify-end xs:items-end">
           <ul className="flex flex-row gap-6 justify-center items-center ">
             <li className="">
-              <a
+              <Link
                 className="hover:underline hover:underline-offset-2 focus:outline-none"
-                href="/all"
+                href="/shop"
               >
                 Products
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="hover:underline hover:underline-offset-2" href="#">
+              <Link
+                className="hover:underline hover:underline-offset-2"
+                href="#"
+              >
                 Sign in
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 className="font-bold hover:underline hover:underline-offset-2"
                 href="/sign"
               >
                 Sign up
-              </a>
+              </Link>
             </li>
             <li>
               <Link
-                className="fa fa-shopping-bag scale-125 hover:underline hover:underline-offset-4 "
-                href="/bag"
+                className="fa fa-shopping-cart scale-125 hover:underline hover:underline-offset-4 "
+                href="/shop/cart"
               ></Link>
             </li>
             <li>
               <Link
                 className="fa fa-heart scale-125 hover:underline hover:underline-offset-4 "
-                href="/fav"
+                href="/shop/fav"
               ></Link>
             </li>
             <li>

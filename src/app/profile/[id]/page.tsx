@@ -1,12 +1,8 @@
-import { Nav } from "@/components/Nav";
-import React from "react";
-
 export default function Profile(props: any) {
-  const prodId = props.params.id;
+  const userId = props.params.id;
 
   return (
     <div className="bg-white h-auto text-black">
-      <Nav />
       <div className="flex flex-col justify-center items-center h-screen">
         <div className="bg-zinc-100 grid grid-cols-2 border rounded-t-2xl p-2 lg:w-1/4 xs:w-2/4 text-center">
           <h2>User  <span className="font-bold">✏</span></h2>

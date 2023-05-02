@@ -1,7 +1,6 @@
 import { Footer } from "@/components/Footer";
-import { Nav } from "@/components/Nav";
 import Image from "next/image";
-import data from "../../utils/data";
+import data from "../../../utils/data";
 import Link from "next/link";
 
 export default function PageProduct(props: any) {
@@ -9,7 +8,6 @@ export default function PageProduct(props: any) {
 
   return (
     <div className="flex flex-col h-auto bg-white text-black">
-      <Nav />
       <div className="flex flex-row gap-20 justify-center items-center lg:h-auto xs:h-auto">
         <div className="flex flex-col justify-center gap-16 items-center mt-20">
           <div className="flex lg:flex-row xs:flex-col gap-32 justify-center items-center">

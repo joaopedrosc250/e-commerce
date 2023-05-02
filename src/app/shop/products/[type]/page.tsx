@@ -2,7 +2,6 @@
 
 import { Filter } from "@/components/Filter";
 import { Footer } from "@/components/Footer";
-import { Nav } from "@/components/Nav";
 import { Product } from "@/components/Product";
 import { useEffect, useState } from "react";
 import data from "@/app/utils/data";
@@ -52,7 +51,7 @@ export default function Products(props: any) {
 
   return (
     <div id="" className="bg-white text-black flex flex-col">
-      <Nav />
+
       <div className="xs:h-auto grid xs:grid-cols-1 p-20 lg:grid-cols-4 gap-24 lg:h-auto">
         <div className="grid lg:justify-items-start xs:justify-items-center col-span-1 lg:grid-rows-4 xs:grid-rows-1 w-full xs:row-end-1 lg:row-start-1">
           <Filter

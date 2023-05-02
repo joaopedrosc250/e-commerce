@@ -3,13 +3,11 @@
 import { Footer } from "@/components/Footer";
 import { Product } from "@/components/Product";
 import Link from "next/link";
-import { Nav } from "@/components/Nav";
 import data from "../utils/data";
 
 export default function All() {
   return (
     <div className="flex flex-col bg-white text-black">
-      <Nav />
       <div className="xs:h-auto grid xs:grid-cols-1 p-20 lg:grid-cols-4 lg:gap-24 lg:h-auto">
         <div className="grid lg:justify-items-start xs:justify-items-center col-span-1 lg:grid-rows-4 xs:grid-rows-1 w-full xs:row-start-1 lg:row-start-1">
           <nav className="flex flex-col gap-6 lg:p-20 xs:p-0">
@@ -52,7 +50,7 @@ export default function All() {
                 )}
             </div>
             <Link
-              href="/products/tshirt"
+              href="/shop/products/tshirt"
               className="text-white bg-slate-900 p-2 w-fit rounded-3xl hover:rounded-none transition-all ease-in-out"
             >
               See more
@@ -76,7 +74,7 @@ export default function All() {
                 ))}
             </div>
             <Link
-              href="/products/cap"
+              href="/shop/products/cap"
               className="text-white bg-slate-900 p-2 w-fit rounded-3xl hover:rounded-none transition-all ease-in-out"
             >
               See more
@@ -100,7 +98,7 @@ export default function All() {
                 ))}
             </div>
             <Link
-              href="/products/shoe"
+              href="/shop/products/shoe"
               className="text-white bg-slate-900 p-2 w-fit rounded-3xl hover:rounded-none transition-all ease-in-out"
             >
               See more
