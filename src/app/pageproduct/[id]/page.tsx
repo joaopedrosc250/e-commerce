@@ -35,14 +35,14 @@ export default function PageProduct(props: any) {
                       <Link
                         type="button"
                         href="/bag"
-                        className="bg-zinc-900 text-white p-2 flex justify-center items-center text-center rounded-3xl hover:rounded-none transition-all"
+                        className="bg-zinc-900 text-white p-2 flex justify-center items-center text-center rounded-3xl hover:rounded-none transition-all ease-in-out"
                       >
                         Add to bag
                       </Link>
                       <Link
                         type="button"
                         href="/bag"
-                        className="bg-zinc-900 text-white p-2 flex justify-center items-center rounded-3xl hover:rounded-none transition-all"
+                        className="bg-zinc-900 text-white p-2 flex justify-center items-center rounded-3xl hover:rounded-none transition-all ease-in-out"
                       >
                         Finish
                       </Link>

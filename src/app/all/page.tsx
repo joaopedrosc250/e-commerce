@@ -2,21 +2,11 @@
 
 import { Footer } from "@/components/Footer";
 import { Product } from "@/components/Product";
-import { useState } from "react";
 import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import data from "../utils/data";
 
 export default function All() {
-  interface Props {
-    best: () => void;
-    onReset: () => void;
-    lowestPrice: () => void;
-    higherPrice: () => void;
-  }
-
-  const [tshirt, setTshirts] = useState(data.product);
-
   return (
     <div className="flex flex-col bg-white text-black">
       <Nav />
@@ -63,7 +53,7 @@ export default function All() {
             </div>
             <Link
               href="/products/tshirt"
-              className="text-white bg-slate-900 p-2 w-fit rounded-3xl hover:rounded-none"
+              className="text-white bg-slate-900 p-2 w-fit rounded-3xl hover:rounded-none transition-all ease-in-out"
             >
               See more
             </Link>
@@ -87,7 +77,7 @@ export default function All() {
             </div>
             <Link
               href="/products/cap"
-              className="text-white bg-slate-900 p-2 w-fit rounded-3xl hover:rounded-none"
+              className="text-white bg-slate-900 p-2 w-fit rounded-3xl hover:rounded-none transition-all ease-in-out"
             >
               See more
             </Link>
@@ -111,7 +101,7 @@ export default function All() {
             </div>
             <Link
               href="/products/shoe"
-              className="text-white bg-slate-900 p-2 w-fit rounded-3xl hover:rounded-none"
+              className="text-white bg-slate-900 p-2 w-fit rounded-3xl hover:rounded-none transition-all ease-in-out"
             >
               See more
             </Link>
