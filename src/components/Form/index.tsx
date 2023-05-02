@@ -1,9 +1,13 @@
+import Link from "next/link";
+
 export const Form = () => {
   return (
     <div className="text-black flex lg:flex-row xs:flex-col justify-center items-center bg-white bg-cover bg-center lg:h-screen xs:h-auto lg:p-0 xs:p-5 gap-8">
       <div className="flex flex-row lg:justify-start lg:items-start xs:justify-center xs:items-center w-full">
         <div className="flex flex-col gap-6 justify-center items-center w-full">
-          <h1 className="text-3xl">UrbanAvenue</h1>
+          <Link href={"/"}>
+            <h1 className="text-3xl">UrbanAvenue</h1>
+          </Link>
           <p className="text-justify lg:w-4/6 xs:w-3/4">
             Discover the latest trends in urban fashion. With easy browsing,
             join us on the streetwear movement and elevate your wardrobe with
