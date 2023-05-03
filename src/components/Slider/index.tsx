@@ -16,7 +16,7 @@ export const Slider = () => {
         <div className="flex xs:p-4 items-center lg:h-[35rem]">
           {images.slice(0, 4).map((image) => (
             <div
-              className="h-full hover:scale-105 hover:pl-2 hover:pr-2 transition-all ease-in-out"
+              className="h-full hover:scale-105 lg:hover:pl-2 lg:hover:pr-2 transition-all ease-in-out"
               key={image}
             >
               <Image
