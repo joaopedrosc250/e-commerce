@@ -28,7 +28,7 @@ export const Form = () => {
               name="name"
               id="first"
               placeholder="Type the first name..."
-              className="p-1 rounded-xl border-2 focus:outline-zinc-300 p-2"
+              className="rounded-xl border-2 focus:outline-zinc-300 p-2"
               required
             />
             <label className="mt-3 font-semibold">Last name: </label>
@@ -37,7 +37,7 @@ export const Form = () => {
               name="name"
               id="last"
               placeholder="Type the last name..."
-              className="p-1 rounded-xl border-2 focus:outline-zinc-300 p-2"
+              className="rounded-xl border-2 focus:outline-zinc-300 p-2"
               required
             />
             <label className="mt-3 font-semibold">E-mail: </label>
@@ -46,7 +46,7 @@ export const Form = () => {
               name="email"
               id="email"
               placeholder="Type your better email..."
-              className="p-1 rounded-xl border-2 focus:outline-zinc-300 p-2"
+              className="rounded-xl border-2 focus:outline-zinc-300 p-2"
               required
             />
             <button
