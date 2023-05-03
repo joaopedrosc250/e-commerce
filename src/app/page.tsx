@@ -3,10 +3,12 @@ import { Product } from "@/components/Product";
 import { Slider } from "@/components/Slider";
 import Link from "next/link";
 import data from "./utils/data";
+import { Nav } from "@/components/Nav";
 
 export default function Main() {
   return (
     <div id="" className="flex flex-col bg-white text-black">
+      <Nav />
       <Slider />
       <div className="xs:h-auto grid xs:grid-cols-1 lg:p-20 xs:p-16 lg:grid-cols-4 gap-24 lg:h-auto">
         <div className="xs:col-span-1 lg:col-span-4 ">
@@ -70,7 +72,7 @@ export default function Main() {
           <div className="grid justify-items-center">
             <Link
               href="/shop"
-              className="bg-zinc-900 text-white p-2 font-semibold rounded-3xl hover:scale-105 hover:rounded-none transition-all ease-in-out"
+              className="bg-zinc-900 text-white p-2 font-semibold rounded-3xl hover:rounded-none transition-all ease-in-out"
             >
               See all the products
             </Link>

@@ -53,7 +53,7 @@ export default function Products(props: any) {
     <div id="" className="bg-white text-black flex flex-col">
 
       <div className="xs:h-auto grid xs:grid-cols-1 p-20 lg:grid-cols-4 gap-24 lg:h-auto">
-        <div className="grid lg:justify-items-start xs:justify-items-center col-span-1 lg:grid-rows-4 xs:grid-rows-1 w-full xs:row-end-1 lg:row-start-1">
+        <div className="col-span-1">
           <Filter
             Best={data.product ? (size) => Best(size) : Best}
             onReset={handleResetClick}

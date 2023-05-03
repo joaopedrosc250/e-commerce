@@ -38,7 +38,7 @@ export const Nav = () => {
             <li>
               <Link
                 className="font-bold hover:underline hover:underline-offset-2"
-                href="/sign"
+                href="/home/sign"
               >
                 Sign up
               </Link>
@@ -58,7 +58,7 @@ export const Nav = () => {
             <li>
               <Link
                 className="fa fa-user scale-125 hover:underline hover:underline-offset-4 "
-                href="/profile/1"
+                href="/home/profile/1"
               ></Link>
             </li>
           </ul>

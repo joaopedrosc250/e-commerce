@@ -1,18 +1,17 @@
+import Link from "next/link";
+
 export const Form = () => {
   return (
     <div className="text-black flex lg:flex-row xs:flex-col justify-center items-center bg-white bg-cover bg-center lg:h-screen xs:h-auto lg:p-0 xs:p-5 gap-8">
       <div className="flex flex-row lg:justify-start lg:items-start xs:justify-center xs:items-center w-full">
         <div className="flex flex-col gap-6 justify-center items-center w-full">
+          <Link href="/">
+            <h1 className="text-3xl">UrbanAvenue</h1>
+          </Link>
           <p className="text-justify lg:w-4/6 xs:w-3/4">
             Discover the latest trends in urban fashion. With easy browsing,
             join us on the streetwear movement and elevate your wardrobe with
             our trendy and comfortable pieces.
-          </p>
-          <p className="text-justify lg:w-4/6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
-            sequi dolor repellat, molestiae labore eveniet fugiat temporibus
-            corrupti explicabo mollitia voluptates unde ipsa voluptatum
-            excepturi exercitationem consequatur quo voluptas quis.
           </p>
         </div>
       </div>
@@ -29,7 +28,7 @@ export const Form = () => {
               name="name"
               id="first"
               placeholder="Type the first name..."
-              className="p-1 rounded-xl border-2 focus:outline-zinc-300 focus:shadow-xl"
+              className="p-1 rounded-xl border-2 focus:outline-zinc-300 p-2"
               required
             />
             <label className="mt-3 font-semibold">Last name: </label>
@@ -38,7 +37,7 @@ export const Form = () => {
               name="name"
               id="last"
               placeholder="Type the last name..."
-              className="p-1 rounded-xl border-2 focus:outline-zinc-300 focus:shadow-xl"
+              className="p-1 rounded-xl border-2 focus:outline-zinc-300 p-2"
               required
             />
             <label className="mt-3 font-semibold">E-mail: </label>
@@ -47,14 +46,14 @@ export const Form = () => {
               name="email"
               id="email"
               placeholder="Type your better email..."
-              className="p-1 rounded-xl border-2 focus:outline-zinc-300 focus:shadow-xl"
+              className="p-1 rounded-xl border-2 focus:outline-zinc-300 p-2"
               required
             />
             <button
               title="submit"
               type="submit"
               value="Send"
-              className="text-white mt-8 p-2 rounded-xl bg-blue-600 hover:scale-110 hover:rounded-none hover:bg-black transition-all ease-in-out"
+              className="text-white mt-8 p-2 rounded-xl bg-blue-600 hover:rounded-none hover:bg-black transition-all ease-in-out"
             >
               Submit
             </button>

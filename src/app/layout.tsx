@@ -2,7 +2,6 @@
 import Head from "next/head";
 import "./globals.css";
 import { Vollkorn } from "@next/font/google";
-import { Nav } from "@/components/Nav";
 
 const vollkorn = Vollkorn({
   subsets: ["latin"],
@@ -31,7 +30,6 @@ export default function RootLayout({
       <body
         className={`scrollbar-thin scrollbar-track-white scrollbar-thumb-slate-300 ${vollkorn.className} bg-white`}
       >
-        <Nav />
         {children}
       </body>
     </html>

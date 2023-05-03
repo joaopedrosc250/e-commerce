@@ -1,9 +1,11 @@
+"use client";
+
 import Image from "next/image";
 
 export const Slider = () => {
   const images = [
-    "/model-5.jpg",
-    "/model-8.jpg",
+    "/model-10.jpg",
+    "/model-11.jpg",
     "/model-7.jpg",
     "/model-6.jpg",
   ];
@@ -12,7 +14,7 @@ export const Slider = () => {
     <div className="w-full">
       <div className="flex lg:flex-row justify-center overflow-hidden">
         <div className="flex xs:p-4 items-center lg:h-[35rem]">
-          {images.map((image) => (
+          {images.slice(0, 4).map((image) => (
             <div
               className="h-full hover:scale-105 hover:pl-2 hover:pr-2 transition-all ease-in-out"
               key={image}

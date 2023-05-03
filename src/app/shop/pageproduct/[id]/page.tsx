@@ -32,14 +32,14 @@ export default function PageProduct(props: any) {
                     <div className="flex lg:flex-row xs:flex-row justify-center gap-2">
                       <Link
                         type="button"
-                        href="/bag"
+                        href="/shop/cart"
                         className="bg-zinc-900 text-white p-2 flex justify-center items-center text-center rounded-3xl hover:rounded-none transition-all ease-in-out"
                       >
-                        Add to bag
+                        Add to cart
                       </Link>
                       <Link
                         type="button"
-                        href="/bag"
+                        href="#"
                         className="bg-zinc-900 text-white p-2 flex justify-center items-center rounded-3xl hover:rounded-none transition-all ease-in-out"
                       >
                         Finish
