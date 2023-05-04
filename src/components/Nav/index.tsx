@@ -1,16 +1,7 @@
-"use client";
-
-import React, { useState } from "react";
 import Link from "next/link";
 import { Search } from "../Search";
 
 export const Nav = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  function toggleMobileMenu() {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  }
-  
   return (
     <div className="flex w-full bg-white p-2 text-black xs:flex-col xs:items-center xs:justify-center lg:flex-row lg:items-center lg:justify-evenly">
       <div className="flex items-center justify-center xs:flex-col xs:gap-1 lg:flex-row lg:gap-40 ">
@@ -23,22 +14,13 @@ export const Nav = () => {
           <Search />
         </div>
       </div>
-      <div className="flex lg:flex-col items-end justify-center ">
-        <nav className="flex gap-4 xs:flex-col xs:items-center xs:justify-end lg:absolute lg:flex-row-reverse lg:items-center lg:justify-center">
-          <button
-            title="button"
-            className={`fa fa-bars scale-125   ${
-              isMobileMenuOpen ? "" : "text-black"
-            }`}
-            onClick={toggleMobileMenu}
-          ></button>
+      <div className="flex items-end justify-center lg:flex-col ">
+        <nav className="flex gap-6 xs:flex-col xs:items-center xs:justify-end lg:absolute lg:flex-row-reverse lg:items-center lg:justify-center">
+          {/* <button title="button" className={`fa fa-bars scale-125 `}></button> */}
           <div className="flex xs:flex-col xs:items-end xs:justify-end lg:flex-row-reverse lg:items-center lg:justify-center">
             <ul
-              className={`flex xs:items-center xs:justify-center xs:gap-4 lg:items-center lg:justify-center lg:gap-6 ${
-                isMobileMenuOpen
-                  ? "hidden"
-                  : " flex xs:flex-row lg:flex-row"
-              }`}
+              className={`flex xs:items-center xs:justify-center xs:gap-4 lg:items-center lg:justify-center lg:gap-6 
+                `}
             >
               <li>
                 <Link className="" href="/shop">
@@ -64,14 +46,14 @@ export const Nav = () => {
               <li>
                 <Link className="fa fa-heart scale-125" href="/shop/fav"></Link>
               </li>
-              {
+              {/* {
                 <li>
                   <Link
                     className="fa fa-user scale-125 "
                     href="/home/profile/1"
                   ></Link>
                 </li>
-              }
+              } */}
             </ul>
           </div>
         </nav>

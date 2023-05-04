@@ -2,7 +2,14 @@ import { FunctionProps } from "@/types/filter";
 import React, { useState } from "react";
 
 export const Filter = (props: FunctionProps) => {
-  const { Best, onReset, lowestPrice, higherPrice } = props;
+  const {
+    Best,
+    onReset,
+    lowestPrice,
+    higherPrice,
+    bestLowestPrice,
+    bestHigherPrice,
+  } = props;
 
   function handleResetClick() {
     onReset();
@@ -17,9 +24,9 @@ export const Filter = (props: FunctionProps) => {
   };
 
   return (
-    <div className="grid xs:pb-4 xs:w-3/4 p-1 rounded-xl gap-2 border-lime-600">
-      <h2 className="font-bold flex justify-start">Filter by:</h2>
-      <div className="grid gap-1 justify-items-start">
+    <div className="grid gap-2 rounded-xl border-lime-600 p-1 xs:w-3/4 xs:pb-4">
+      <h2 className="flex justify-start font-bold">Filter by:</h2>
+      <div className="grid justify-items-start gap-1">
         <h4 className="flex">Filter by size:</h4>
         {Best ? (
           <>
@@ -27,7 +34,7 @@ export const Filter = (props: FunctionProps) => {
               onClick={() => Best("P")}
               type="button"
               value="Filter"
-              className="flex justify-center items-center rounded-xl w-1/6 hover:text-black hover:bg-white bg-zinc-700 text-white"
+              className="flex w-1/6 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none"
             >
               P
             </button>
@@ -35,7 +42,7 @@ export const Filter = (props: FunctionProps) => {
               onClick={() => Best("M")}
               type="button"
               value="Filter"
-              className="flex justify-center items-center rounded-xl w-1/6 hover:text-black hover:bg-white bg-zinc-700 text-white"
+              className="flex w-1/6 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none"
             >
               M
             </button>
@@ -43,20 +50,20 @@ export const Filter = (props: FunctionProps) => {
               onClick={() => Best("G")}
               type="button"
               value="Filter"
-              className="flex justify-center items-center rounded-xl w-1/6 hover:text-black hover:bg-white bg-zinc-700 text-white"
+              className="flex w-1/6 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none"
             >
               G
             </button>
           </>
-        ) : null }
+        ) : null}
       </div>
-      <div className="grid gap-1 justify-items-start">
+      <div className="grid justify-items-start gap-1">
         <h4 className="flex justify-center">Filter by price:</h4>
         <button
           onClick={() => lowestPrice(50, 100)}
           type="button"
           value="Filter"
-          className="flex justify-center items-center rounded-xl w-2/4 hover:text-black hover:bg-white bg-zinc-700 text-white"
+          className="flex w-3/6 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none"
         >
           U$50 & U$100
         </button>
@@ -64,9 +71,58 @@ export const Filter = (props: FunctionProps) => {
           onClick={() => higherPrice(100, 150)}
           type="button"
           value="Filter"
-          className="flex justify-center items-center rounded-xl w-2/4 hover:text-black hover:bg-white bg-zinc-700 text-white"
+          className="flex w-3/6 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none"
         >
           U$100 & U$150
+        </button>
+        <h4 className="flex justify-center">Merge Filter:</h4>
+        <button
+          onClick={() => bestLowestPrice(100, 150, "P")}
+          type="button"
+          value="Filter"
+          className="flex w-4/6 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none"
+        >
+          U$100 & U$150 & P
+        </button>
+        <button
+          onClick={() => bestLowestPrice(100, 150, "M")}
+          type="button"
+          value="Filter"
+          className="flex w-4/6 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none"
+        >
+          U$100 & U$150 & M
+        </button>
+        <button
+          onClick={() => bestLowestPrice(100, 150, "G")}
+          type="button"
+          value="Filter"
+          className="flex w-4/6 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none"
+        >
+          U$100 & U$150 & G
+        </button>
+        <button
+          onClick={() => bestHigherPrice(100, 150, "P")}
+          type="button"
+          value="Filter"
+          className="flex w-4/6 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none"
+        >
+          U$100 & U$150 & P
+        </button>
+        <button
+          onClick={() => bestHigherPrice(100, 150, "M")}
+          type="button"
+          value="Filter"
+          className="flex w-4/6 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none"
+        >
+          U$100 & U$150 & M
+        </button>
+        <button
+          onClick={() => bestHigherPrice(100, 150, "G")}
+          type="button"
+          value="Filter"
+          className="flex w-4/6 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none"
+        >
+          U$100 & U$150 & G
         </button>
       </div>
       <h3 className="flex justify-start">Reset filter</h3>
@@ -75,7 +131,7 @@ export const Filter = (props: FunctionProps) => {
           onClick={handleResetClick}
           type="button"
           value="Reset"
-          className="flex justify-center items-center rounded-xl w-2/4 hover:text-black hover:bg-white bg-zinc-700 text-white"
+          className="flex w-2/6 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none"
         >
           Reset
         </button>

@@ -5,7 +5,7 @@ import { Vollkorn } from "@next/font/google";
 
 const vollkorn = Vollkorn({
   subsets: ["latin"],
-  weight: "400",
+  weight: "500",
 });
 
 export const metadata = {

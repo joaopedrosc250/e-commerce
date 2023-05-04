@@ -49,22 +49,43 @@ export default function Products(props: any) {
     setFilteredProducts(filtered);
   }
 
-  return (
-    <div id="" className="bg-white text-black flex flex-col">
+  function bestLowestPrice(minPrice: number, maxPrice: number, size: string) {
+    const filtered = data.product.filter(
+      (product) =>
+        product.price >= minPrice &&
+        product.price <= maxPrice &&
+        product.size === size
+    );
+    setFilteredProducts(filtered);
+  }
 
-      <div className="xs:h-auto grid xs:grid-cols-1 p-20 lg:grid-cols-4 gap-24 lg:h-auto">
+  function bestHigherPrice(minPrice: number, maxPrice: number, size: string) {
+    const filtered = data.product.filter(
+      (product) =>
+        product.price >= minPrice &&
+        product.price <= maxPrice &&
+        product.size === size
+    );
+    setFilteredProducts(filtered);
+  }
+
+  return (
+    <div id="" className="flex flex-col bg-white text-black">
+      <div className="grid gap-24 p-20 xs:h-auto xs:grid-cols-1 lg:h-auto lg:grid-cols-4">
         <div className="col-span-1">
           <Filter
             Best={data.product ? (size) => Best(size) : Best}
             onReset={handleResetClick}
             lowestPrice={lowestPrice}
             higherPrice={higherPrice}
+            bestLowestPrice={bestLowestPrice}
+            bestHigherPrice={bestHigherPrice}
           />
         </div>
         <div className="xs:col-span-1 lg:col-span-3">
           <div className="grid justify-items-center">
-            <h3 className="font-bold text-2xl mb-5">{title}</h3>
-            <div className="grid items-center lg:gap-10 xs:gap-20 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
+            <h3 className="mb-5 text-2xl font-bold">{title}</h3>
+            <div className="mt-6 grid items-center xs:grid-cols-1 xs:gap-20 md:grid-cols-2 lg:grid-cols-4 lg:gap-10">
               {filteredProducts
                 .filter(
                   (element) => element.type == prodType || prodType === "all"
