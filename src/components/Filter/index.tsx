@@ -77,28 +77,28 @@ export const Filter = (props: FunctionProps) => {
         </button>
         <h4 className="flex justify-center">Merge Filter:</h4>
         <button
-          onClick={() => bestLowestPrice(100, 150, "P")}
+          onClick={() => bestLowestPrice(50, 100, "P")}
           type="button"
           value="Filter"
           className="flex w-4/6 lg:p-0 xs:p-2 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none"
         >
-          U$100 & U$150 & P
+          U$50 & U$100 & P
         </button>
         <button
-          onClick={() => bestLowestPrice(100, 150, "M")}
+          onClick={() => bestLowestPrice(50, 100, "M")}
           type="button"
           value="Filter"
           className="flex w-4/6 lg:p-0 xs:p-2 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none"
         >
-          U$100 & U$150 & M
+          U$50 & U$100 & M
         </button>
         <button
-          onClick={() => bestLowestPrice(100, 150, "G")}
+          onClick={() => bestLowestPrice(50, 100, "G")}
           type="button"
           value="Filter"
           className="flex w-4/6 lg:p-0 xs:p-2 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none"
         >
-          U$100 & U$150 & G
+          U$50 & U$100 & G
         </button>
         <button
           onClick={() => bestHigherPrice(100, 150, "P")}

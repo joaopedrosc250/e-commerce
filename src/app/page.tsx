@@ -11,7 +11,7 @@ export default function Main() {
       <Nav />
       <Slider />
       <div className="grid gap-24 xs:h-auto xs:grid-cols-1 xs:p-16 lg:h-auto lg:grid-cols-4 lg:p-20">
-        <div className="xs:col-span-1 lg:col-span-4 ">
+        <div className="xs:col-span-1 lg:col-span-4">
           <div className="grid justify-items-center">
             <h3 className="text-xl font-bold xs:mt-0 lg:mt-12">T-shirts</h3>
             <div className="mt-6 grid w-5/6 items-center xs:grid-cols-1 xs:gap-20 md:grid-cols-2 lg:grid-cols-4 lg:gap-16">
