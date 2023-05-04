@@ -21,7 +21,7 @@ export default function PageProduct(props: any) {
                     key={element.id}
                     src={element.image}
                     alt={element.type}
-                    className="lg:w-full xs:w-5/6 lg:h-[30rem] xs:h-[18rem] rounded-3xl"
+                    className="lg:w-full xs:w-5/6 lg:h-[30rem] xs:h-[16rem] rounded-3xl"
                   />
                   <div className="flex flex-col justify-center lg:items-start xs:items-center gap-4 w-3/6">
                     <h2 className="font-bold text-2xl">{element.title}</h2>
