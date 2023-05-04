@@ -1,6 +1,6 @@
 import { Footer } from "@/components/Footer";
 
-export default function Bag() {
+export default function Cart() {
   return (
     <div className="bg-white flex flex-col text-black lg:h-auto xs:h-auto">
       <div className="flex lg:flex-col xs:flex-col justify-center gap-20 items-center h-screen">

@@ -10,11 +10,11 @@ export default function Main() {
     <div id="" className="flex flex-col bg-white text-black">
       <Nav />
       <Slider />
-      <div className="xs:h-auto grid xs:grid-cols-1 lg:p-20 xs:p-16 lg:grid-cols-4 gap-24 lg:h-auto">
+      <div className="grid gap-24 xs:h-auto xs:grid-cols-1 xs:p-16 lg:h-auto lg:grid-cols-4 lg:p-20">
         <div className="xs:col-span-1 lg:col-span-4 ">
           <div className="grid justify-items-center">
-            <h3 className="lg:mt-12 xs:mt-0 font-bold text-xl">T-shirts</h3>
-            <div className="grid items-center lg:gap-16 xs:gap-20 w-5/6 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
+            <h3 className="text-xl font-bold xs:mt-0 lg:mt-12">T-shirts</h3>
+            <div className="mt-6 grid w-5/6 items-center xs:grid-cols-1 xs:gap-20 md:grid-cols-2 lg:grid-cols-4 lg:gap-16">
               {data.product
                 .filter((element) => element.type == "tshirt")
                 .slice(0, 4)
@@ -32,8 +32,8 @@ export default function Main() {
             </div>
           </div>
           <div className="grid justify-items-center">
-            <h3 className="mt-12 font-bold text-xl">Caps</h3>
-            <div className="grid items-center lg:gap-16 xs:gap-20 w-5/6 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
+            <h3 className="mt-12 text-xl font-bold">Caps</h3>
+            <div className="mt-6 grid w-5/6 items-center xs:grid-cols-1 xs:gap-20 md:grid-cols-2 lg:grid-cols-4 lg:gap-16">
               {data.product
                 .filter((element) => element.type == "cap")
                 .slice(0, 4)
@@ -51,8 +51,8 @@ export default function Main() {
             </div>
           </div>
           <div className="grid justify-items-center">
-            <h3 className="mt-12 font-bold text-xl">Shoe</h3>
-            <div className="grid items-center lg:gap-16 xs:gap-20 w-5/6 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6 mb-24">
+            <h3 className="mt-12 text-xl font-bold">Shoe</h3>
+            <div className="mb-24 mt-6 grid w-5/6 items-center xs:grid-cols-1 xs:gap-20 md:grid-cols-2 lg:grid-cols-4 lg:gap-16">
               {data.product
                 .filter((element) => element.type == "shoe")
                 .slice(0, 4)
@@ -72,7 +72,7 @@ export default function Main() {
           <div className="grid justify-items-center">
             <Link
               href="/shop"
-              className="bg-zinc-900 text-white p-2 font-semibold rounded-3xl hover:rounded-none transition-all ease-in-out"
+              className="rounded-3xl bg-zinc-900 p-2 font-semibold text-white transition-all ease-in-out hover:rounded-none"
             >
               See all the products
             </Link>
