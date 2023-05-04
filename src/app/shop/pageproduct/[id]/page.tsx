@@ -21,9 +21,9 @@ export default function PageProduct(props: any) {
                     key={element.id}
                     src={element.image}
                     alt={element.type}
-                    className="lg:w-full xs:w-5/6 lg:h-[30rem] xs:h-[20rem] rounded-3xl"
+                    className="lg:w-full xs:w-5/6 lg:h-[30rem] xs:h-[18rem] rounded-3xl"
                   />
-                  <div className="flex flex-col justify-center lg:items-start xs:items-center gap-4 w-2/6">
+                  <div className="flex flex-col justify-center lg:items-start xs:items-center gap-4 w-3/6">
                     <h2 className="font-bold text-2xl">{element.title}</h2>
                     <p className="text-xl">U${element.price}</p>
                     <p className="text-xl text-lime-500">
@@ -33,9 +33,9 @@ export default function PageProduct(props: any) {
                       <Link
                         type="button"
                         href="/shop/cart"
-                        className="bg-zinc-900 text-white p-2 flex justify-center items-center text-center rounded-3xl hover:rounded-none transition-all ease-in-out"
+                        className="bg-zinc-900 text-white p-2 flex flex-row justify-center items-center text-center rounded-3xl hover:rounded-none transition-all ease-in-out"
                       >
-                        Add to cart
+                       <p className="">Add to cart</p>
                       </Link>
                       <Link
                         type="button"
