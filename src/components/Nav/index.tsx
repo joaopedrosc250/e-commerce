@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { Search } from "../Search";
+import { Heart, ShoppingCart, User } from "@phosphor-icons/react";
 
 export const Nav = () => {
   return (
@@ -38,20 +41,20 @@ export const Nav = () => {
                 </Link>
               </li>
               <li>
-                <Link
-                  className="fa fa-shopping-cart scale-125"
-                  href="/shop/cart"
-                ></Link>
+                <Link className="" href="/shop/cart">
+                  <ShoppingCart size={30} />
+                </Link>
               </li>
               <li>
-                <Link className="fa fa-heart scale-125" href="/shop/fav"></Link>
+                <Link className="" href="/shop/fav">
+                  <Heart size={30} />
+                </Link>
               </li>
               {/* {
                 <li>
-                  <Link
-                    className="fa fa-user scale-125 "
-                    href="/home/profile/1"
-                  ></Link>
+                  <Link className="scale-125 " href="/home/profile/1">
+                    <User size={30} />
+                  </Link>
                 </li>
               } */}
             </ul>

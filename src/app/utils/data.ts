@@ -15,7 +15,7 @@ const data = {
       stock: 20,
     },
     {
-      title: "t-shrit-2",
+      title: "t-shirt-2",
       id: "2",
       type: "tshirt",
       url: "/shop/pageproduct/2",

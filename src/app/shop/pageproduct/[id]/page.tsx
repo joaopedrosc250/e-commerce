@@ -3,6 +3,7 @@ import Image from "next/image";
 import data from "../../../utils/data";
 import Link from "next/link";
 
+
 export default function PageProduct(props: any) {
   const prodId = props.params.id;
 
