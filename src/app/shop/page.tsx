@@ -8,11 +8,11 @@ import data from "../utils/data";
 export default function All() {
   return (
     <div className="flex flex-col bg-white text-black">
-      <div className="xs:h-auto grid xs:grid-cols-1 p-20 lg:grid-cols-4 lg:gap-24 lg:h-auto">
-        <div className="grid lg:justify-items-start xs:justify-items-center col-span-1 lg:grid-rows-4 xs:grid-rows-1 w-full xs:row-start-1 lg:row-start-1">
-          <nav className="flex flex-col gap-6 lg:p-20 xs:p-0">
+      <div className="grid p-20 xs:h-auto xs:grid-cols-1 lg:h-auto lg:grid-cols-4 lg:gap-24">
+        <div className="col-span-1 grid w-full xs:row-start-1 xs:grid-rows-1 xs:justify-items-center lg:row-start-1 lg:grid-rows-4 lg:justify-items-start">
+          <nav className="flex flex-col gap-6 xs:p-0 lg:p-20">
             <strong className="">Categories</strong>
-            <ul className="flex flex-col gap-2 justify-center items-center">
+            <ul className="flex flex-col items-center justify-center gap-2">
               <li>
                 <a href="#tshirts" className="">
                   T-shirts
@@ -28,9 +28,9 @@ export default function All() {
           </nav>
         </div>
         <div id="tshirts" className="xs:col-span-1 lg:col-span-3">
-          <div className="grid justify-items-center mt-16 gap-4">
-            <h3 className="font-bold text-xl">T-shirts</h3>
-            <div className="grid items-center lg:gap-10 xs:gap-20 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
+          <div className="mt-16 grid justify-items-center gap-4">
+            <h3 className="text-xl font-bold">T-shirts</h3>
+            <div className="mt-6 grid items-center xs:grid-cols-1 xs:gap-20 md:grid-cols-2 lg:grid-cols-4 lg:gap-10">
               {data.product
                 .filter((element) => element.type == "tshirt")
                 .slice(0, 4)
@@ -45,20 +45,24 @@ export default function All() {
                       image={element.image}
                       title={element.title}
                       price={element.price}
+                      type={""}
+                      size={""}
+                      desc={""}
+                      stock={0}
                     />
                   )
                 )}
             </div>
             <Link
               href="/shop/products/tshirt"
-              className="text-white bg-slate-900 font-semibold p-2 w-fit rounded-3xl hover:rounded-none transition-all ease-in-out"
+              className="w-fit rounded-3xl bg-slate-900 p-2 font-semibold text-white transition-all ease-in-out hover:rounded-none"
             >
               See more
             </Link>
           </div>
           <div id="caps" className="grid justify-items-center gap-4">
-            <h3 className="mt-16 font-bold text-xl">Caps</h3>
-            <div className="grid items-center lg:gap-10 xs:gap-20 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
+            <h3 className="mt-16 text-xl font-bold">Caps</h3>
+            <div className="mt-6 grid items-center xs:grid-cols-1 xs:gap-20 md:grid-cols-2 lg:grid-cols-4 lg:gap-10">
               {data.product
                 .filter((element) => element.type == "cap")
                 .slice(0, 4)
@@ -70,19 +74,23 @@ export default function All() {
                     image={element.image}
                     title={element.title}
                     price={element.price}
+                    type={""}
+                    size={""}
+                    desc={""}
+                    stock={0}
                   />
                 ))}
             </div>
             <Link
               href="/shop/products/cap"
-              className="text-white bg-slate-900 font-semibold p-2 w-fit rounded-3xl hover:rounded-none transition-all ease-in-out"
+              className="w-fit rounded-3xl bg-slate-900 p-2 font-semibold text-white transition-all ease-in-out hover:rounded-none"
             >
               See more
             </Link>
           </div>
-          <div id="shoes" className="grid justify-items-center mb-24 gap-4">
-            <h3 className="mt-16 font-bold text-xl">Shoes</h3>
-            <div className="grid justify-items-center lg:gap-10 xs:gap-20 lg:grid-cols-4 xs:grid-cols-1 md:grid-cols-2 mt-6">
+          <div id="shoes" className="mb-24 grid justify-items-center gap-4">
+            <h3 className="mt-16 text-xl font-bold">Shoes</h3>
+            <div className="mt-6 grid justify-items-center xs:grid-cols-1 xs:gap-20 md:grid-cols-2 lg:grid-cols-4 lg:gap-10">
               {data.product
                 .filter((element) => element.type == "shoe")
                 .slice(0, 4)
@@ -94,12 +102,16 @@ export default function All() {
                     image={element.image}
                     title={element.title}
                     price={element.price}
+                    type={""}
+                    size={""}
+                    desc={""}
+                    stock={0}
                   />
                 ))}
             </div>
             <Link
               href="/shop/products/shoe"
-              className="text-white bg-slate-900 font-semibold p-2 w-fit rounded-3xl hover:rounded-none transition-all ease-in-out"
+              className="w-fit rounded-3xl bg-slate-900 p-2 font-semibold text-white transition-all ease-in-out hover:rounded-none"
             >
               See more
             </Link>
