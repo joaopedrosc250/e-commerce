@@ -98,6 +98,10 @@ export default function Products(props: any) {
                     image={element.image}
                     title={element.title}
                     price={element.price}
+                    type={""}
+                    size={""}
+                    desc={""}
+                    stock={0}
                   />
                 ))}
             </div>
