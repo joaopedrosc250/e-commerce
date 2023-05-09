@@ -19,7 +19,7 @@ model Products {
   image  String
   price  Float
   desc   String
-  stock Int
+  stock  Int
 }
 
 model Users {

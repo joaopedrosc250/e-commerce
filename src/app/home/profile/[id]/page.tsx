@@ -1,21 +1,22 @@
+"use client";
+
 import { Footer } from "@/components/Footer";
+import { Nav } from "@/components/Nav";
+import { User } from "@phosphor-icons/react";
 
 export default function Profile(props: any) {
   const userId = props.params.id;
 
   return (
-    <div className="bg-white h-auto text-black">
-      <div className="flex flex-col justify-center items-center h-screen">
-        <div className="bg-zinc-100 grid grid-cols-2 border rounded-t-2xl p-2 lg:w-1/4 xs:w-2/4 text-center">
-          <h2>
-            User <span className="font-bold">✏</span>
-          </h2>
-          <p>
-            Email <span className="font-bold">✏</span>
-          </p>
+    <div className="flex h-auto flex-col items-center justify-center bg-white text-black">
+      <Nav />
+      <div className="relative mb-10 mt-10 flex h-screen flex-col items-center justify-start rounded-3xl border-2 border-slate-500 bg-slate-50 xs:w-3/4 lg:w-2/4">
+        <div className="absolute left-0 top-0 ml-12 mt-8">
+          <User size={42} className="" />
+          <p>User</p>
         </div>
-        <div className="bg-zinc-100 border p-40 lg:w-1/4 xs:w-2/4 text-center rounded-b-2xl ">
-          history
+        <div className="flex flex-col items-center justify-center mt-10">
+          <h2 className="font-semibold">Recent</h2>
         </div>
       </div>
       <Footer />

@@ -4,7 +4,7 @@ import Link from "next/link";
 export const Search = () => {
   return (
     <div id="search-box" className="flex flex-row items-center justify-center">
-      <div className="flex items-center justify-center rounded-3xl border-2 p-2 focus:rounded-none">
+      <div className="flex items-center justify-center rounded-3xl border-2 border-slate-300 p-2">
         <input
           type="text"
           placeholder="Search..."

@@ -1,11 +1,9 @@
-// These styles apply to every route in the application
-import Head from "next/head";
 import "./globals.css";
 import { Vollkorn } from "@next/font/google";
 
 const vollkorn = Vollkorn({
   subsets: ["latin"],
-  display: 'swap',
+  display: "swap",
   weight: "500",
 });
 
@@ -21,11 +19,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br" className={`${vollkorn.className}`}>
-      <Head>
-       
-      </Head>
       <body
-        className={`scrollbar-thin scrollbar-track-white scrollbar-thumb-slate-300 bg-white`}
+        className={`bg-white scrollbar-thin scrollbar-track-white scrollbar-thumb-slate-300`}
       >
         {children}
       </body>

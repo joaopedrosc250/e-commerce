@@ -13,7 +13,7 @@ export const Nav = () => {
             UrbanAvenue
           </Link>
         </div>
-        <div className="xs:relative xs:p-2 md:relative md:p-4 lg:relative">
+        <div className="p-4">
           <Search />
         </div>
       </div>
@@ -50,13 +50,13 @@ export const Nav = () => {
                   <Heart size={30} />
                 </Link>
               </li>
-              {/* {
+              {
                 <li>
                   <Link className="scale-125 " href="/home/profile/1">
                     <User size={30} />
                   </Link>
                 </li>
-              } */}
+              }
             </ul>
           </div>
         </nav>

@@ -1,4 +1,4 @@
-import { CartProps } from "@/types/cart";
+import { CartProps } from "@/@types/cart";
 import Image from "next/image";
 
 export default function Cart({ id, title, price, image }: CartProps) {
@@ -8,7 +8,7 @@ export default function Cart({ id, title, price, image }: CartProps) {
       className="flex flex-row items-center justify-center  gap-4 text-black"
     >
       <div>
-        <Image src={image} width={220} height={20} alt="image"></Image>
+        <Image src={image} width={120} height={20} alt="image" className="object-contain"></Image>
       </div>
       <div>
         <p className="font-bold">{title}</p>

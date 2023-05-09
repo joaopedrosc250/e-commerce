@@ -1,4 +1,4 @@
-import { FunctionProps } from "@/types/filter";
+import { FunctionProps } from "@/@types/filter";
 import React, { useState } from "react";
 
 export const Filter = (props: FunctionProps) => {
