@@ -10,6 +10,10 @@ const PageSale = () => {
           image={"./cap.avif"}
           title={"cap"}
           price={45.95}
+          type={""}
+          size={""}
+          desc={""}
+          stock={0}
         />
       </div>
       <div className="grid justify-items-center">
