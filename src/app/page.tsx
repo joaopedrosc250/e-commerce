@@ -8,16 +8,12 @@ import { Nav } from "@/components/Nav";
 import MainPage from "@/components/MainPage";
 
 export default function Main() {
-
- 
-
   return (
     <div id="" className="flex flex-col bg-white text-black">
       <Nav />
       <Slider />
       <div className="grid gap-24 xs:h-auto xs:grid-cols-1 xs:p-16 lg:h-auto lg:grid-cols-4 lg:p-20">
         <div className="xs:col-span-1 lg:col-span-4">
-         
           <MainPage />
           <div className="grid justify-items-center">
             <Link

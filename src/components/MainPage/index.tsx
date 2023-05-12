@@ -15,6 +15,7 @@ function Main() {
       .then((data) => {
         setData(data);
         setLoad(false);
+        console.log(data)
       });
   }, []);
 

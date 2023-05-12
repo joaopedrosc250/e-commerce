@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { GithubLogo, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";
 import Link from "next/link";
@@ -50,7 +50,10 @@ export const Footer = () => {
               className="px-2 transition-all ease-in-out hover:underline "
               rel="noopener noreferrer"
             >
-              <LinkedinLogo size={24} className="hover:scale-110 transition-all ease-in-out"/>
+              <LinkedinLogo
+                size={24}
+                className="transition-all ease-in-out hover:scale-110"
+              />
             </Link>
             <Link
               href="https://github.com/LrAmaral"
@@ -59,7 +62,10 @@ export const Footer = () => {
               className="px-2 transition-all ease-in-out hover:underline"
               rel="noopener noreferrer"
             >
-              <GithubLogo size={24} className="hover:scale-110 transition-all ease-in-out"/>
+              <GithubLogo
+                size={24}
+                className="transition-all ease-in-out hover:scale-110"
+              />
             </Link>
             <Link
               href="https://www.instagram.com/amaraldev/"
@@ -68,14 +74,25 @@ export const Footer = () => {
               className="px-2 transition-all ease-in-out hover:underline"
               rel="noopener noreferrer"
             >
-              <InstagramLogo size={24} className="hover:scale-110 transition-all ease-in-out"/>
+              <InstagramLogo
+                size={24}
+                className="transition-all ease-in-out hover:scale-110"
+              />
             </Link>
           </div>
         </div>
       </div>
-      <h2>
-        <span>&#169; </span>All rights reserved to LrAmaral
-      </h2>
+
+      <div>
+        <span>&#169; </span>All rights reserved to{" "}
+        <Link
+          href={"https://lramaral.vercel.app/"}
+          className="hover:underline"
+          target="_blank"
+        >
+          LrAmaral
+        </Link>
+      </div>
     </div>
   );
 };

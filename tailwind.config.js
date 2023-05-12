@@ -34,6 +34,9 @@ module.exports = {
         xl: "1280px",
       },
       display: ["group-focus"],
+      variants: {
+        scrollbar: ["rounded"],
+      },
     },
   },
   plugins: [require("tailwind-scrollbar")],
