@@ -24,8 +24,8 @@ export const Form = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center gap-10 xs:w-2/3 lg:w-full">
-        <div className="flex flex-col items-center justify-center gap-8 rounded-2xl bg-white p-8 shadow-2xl xs:w-full lg:h-2/4 lg:w-2/4">
+      <div className="flex w-full flex-col items-center justify-center gap-10 ">
+        <div className="flex flex-col items-center justify-center gap-8 rounded-2xl bg-white p-8 shadow-2xl xs:w-full lg:w-2/4">
           <h2 className="text-2xl">Create your account</h2>
           <form
             action=""
