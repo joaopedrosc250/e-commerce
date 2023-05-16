@@ -1,14 +1,14 @@
-"use client";
+'use client'
 
-import Link from "next/link";
-import { useState } from "react";
+import Link from 'next/link'
+import { useState } from 'react'
 
 export const Form = () => {
-  const [showPassword, setShowPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState(false)
 
   const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
-  };
+    setShowPassword(!showPassword)
+  }
 
   return (
     <div className="flex items-center justify-center gap-8 bg-white bg-cover bg-center text-black xs:h-auto xs:flex-col xs:p-5 lg:h-screen lg:flex-row lg:p-0">
@@ -60,7 +60,7 @@ export const Form = () => {
             />
             <label className="mt-3 font-semibold">Password: </label>
             <input
-              type={showPassword ? "text" : "password"}
+              type={showPassword ? 'text' : 'password'}
               name="password"
               id="password"
               placeholder="type a secure password..."
@@ -85,5 +85,5 @@ export const Form = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

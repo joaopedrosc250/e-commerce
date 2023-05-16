@@ -1,5 +1,5 @@
-import { MagnifyingGlass } from "@phosphor-icons/react";
-import Link from "next/link";
+import { MagnifyingGlass } from '@phosphor-icons/react'
+import Link from 'next/link'
 
 export const Search = () => {
   return (
@@ -15,5 +15,5 @@ export const Search = () => {
         </Link>
       </div>
     </div>
-  );
-};
+  )
+}

@@ -1,5 +1,4 @@
-import { FunctionProps } from "@/@types/filter";
-import React, { useState } from "react";
+import { FunctionProps } from '@/@types/filter'
 
 export const Filter = (props: FunctionProps) => {
   const {
@@ -9,19 +8,11 @@ export const Filter = (props: FunctionProps) => {
     higherPrice,
     bestLowestPrice,
     bestHigherPrice,
-  } = props;
+  } = props
 
   function handleResetClick() {
-    onReset();
+    onReset()
   }
-
-  /* Verifica se no produto existe a propriedade size */
-  const [size, setSize] = useState("");
-
-  const handleBestClick = () => {
-    if (!Best) return;
-    Best(size ? size : "");
-  };
 
   return (
     <div className="grid gap-2 rounded-xl border-lime-600 p-1 xs:w-3/4 xs:pb-4">
@@ -31,26 +22,26 @@ export const Filter = (props: FunctionProps) => {
         {Best ? (
           <>
             <button
-              onClick={() => Best("P")}
+              onClick={() => Best('P')}
               type="button"
               value="Filter"
-              className="flex w-1/6 lg:p-0 xs:p-2 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none"
+              className="flex w-1/6 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none xs:p-2 lg:p-0"
             >
               P
             </button>
             <button
-              onClick={() => Best("M")}
+              onClick={() => Best('M')}
               type="button"
               value="Filter"
-              className="flex w-1/6 lg:p-0 xs:p-2 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none"
+              className="flex w-1/6 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none xs:p-2 lg:p-0"
             >
               M
             </button>
             <button
-              onClick={() => Best("G")}
+              onClick={() => Best('G')}
               type="button"
               value="Filter"
-              className="flex w-1/6 lg:p-0 xs:p-2 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none"
+              className="flex w-1/6 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none xs:p-2 lg:p-0"
             >
               G
             </button>
@@ -63,7 +54,7 @@ export const Filter = (props: FunctionProps) => {
           onClick={() => lowestPrice(50, 100)}
           type="button"
           value="Filter"
-          className="flex w-3/6 lg:p-0 xs:p-2 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none"
+          className="flex w-3/6 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none xs:p-2 lg:p-0"
         >
           U$50 & U$100
         </button>
@@ -71,56 +62,56 @@ export const Filter = (props: FunctionProps) => {
           onClick={() => higherPrice(100, 150)}
           type="button"
           value="Filter"
-          className="flex w-3/6 lg:p-0 xs:p-2 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none"
+          className="flex w-3/6 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none xs:p-2 lg:p-0"
         >
           U$100 & U$150
         </button>
         <h4 className="flex justify-center">Merge Filter:</h4>
         <button
-          onClick={() => bestLowestPrice(50, 100, "P")}
+          onClick={() => bestLowestPrice(50, 100, 'P')}
           type="button"
           value="Filter"
-          className="flex w-4/6 lg:p-0 xs:p-2 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none"
+          className="flex w-4/6 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none xs:p-2 lg:p-0"
         >
           U$50 & U$100 & P
         </button>
         <button
-          onClick={() => bestLowestPrice(50, 100, "M")}
+          onClick={() => bestLowestPrice(50, 100, 'M')}
           type="button"
           value="Filter"
-          className="flex w-4/6 lg:p-0 xs:p-2 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none"
+          className="flex w-4/6 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none xs:p-2 lg:p-0"
         >
           U$50 & U$100 & M
         </button>
         <button
-          onClick={() => bestLowestPrice(50, 100, "G")}
+          onClick={() => bestLowestPrice(50, 100, 'G')}
           type="button"
           value="Filter"
-          className="flex w-4/6 lg:p-0 xs:p-2 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none"
+          className="flex w-4/6 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none xs:p-2 lg:p-0"
         >
           U$50 & U$100 & G
         </button>
         <button
-          onClick={() => bestHigherPrice(100, 150, "P")}
+          onClick={() => bestHigherPrice(100, 150, 'P')}
           type="button"
           value="Filter"
-          className="flex w-4/6 lg:p-0 xs:p-2 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none"
+          className="flex w-4/6 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none xs:p-2 lg:p-0"
         >
           U$100 & U$150 & P
         </button>
         <button
-          onClick={() => bestHigherPrice(100, 150, "M")}
+          onClick={() => bestHigherPrice(100, 150, 'M')}
           type="button"
           value="Filter"
-          className="flex w-4/6 lg:p-0 xs:p-2 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none"
+          className="flex w-4/6 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none xs:p-2 lg:p-0"
         >
           U$100 & U$150 & M
         </button>
         <button
-          onClick={() => bestHigherPrice(100, 150, "G")}
+          onClick={() => bestHigherPrice(100, 150, 'G')}
           type="button"
           value="Filter"
-          className="flex w-4/6 lg:p-0 xs:p-2 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none"
+          className="flex w-4/6 items-center justify-center rounded-3xl bg-zinc-900 text-white transition-all ease-in-out hover:rounded-none xs:p-2 lg:p-0"
         >
           U$100 & U$150 & G
         </button>
@@ -137,5 +128,5 @@ export const Filter = (props: FunctionProps) => {
         </button>
       </div>
     </div>
-  );
-};
+  )
+}

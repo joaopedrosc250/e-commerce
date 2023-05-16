@@ -1,13 +1,12 @@
-"use client";
+'use client'
 
-import Link from "next/link";
-import { Search } from "../Search";
-import { Heart, List, ShoppingCart, User, X } from "@phosphor-icons/react";
-import { useState } from "react";
+import Link from 'next/link'
+import { Search } from '../Search'
+import { Heart, List, ShoppingCart, X } from '@phosphor-icons/react'
+import { useState } from 'react'
 
 export const Nav = () => {
-  
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false)
 
   return (
     <nav className="w-full bg-white p-4 text-black">
@@ -72,5 +71,5 @@ export const Nav = () => {
         </div>
       )}
     </nav>
-  );
-};
+  )
+}

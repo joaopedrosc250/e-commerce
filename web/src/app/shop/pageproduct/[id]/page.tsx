@@ -1,19 +1,18 @@
-import { Footer } from "@/components/Footer";
-import Image from "next/image";
-import data from "../../../utils/data";
-import Link from "next/link";
-
+import { Footer } from '@/components/Footer'
+import Image from 'next/image'
+import data from '../../../utils/data'
+import Link from 'next/link'
 
 export default function PageProduct(props: any) {
-  const prodId = props.params.id;
+  const prodId = props.params.id
 
   return (
-    <div className="flex flex-col h-auto bg-white text-black">
-      <div className="flex flex-row gap-20 justify-center items-center lg:h-auto xs:h-auto">
-        <div className="flex flex-col justify-center gap-16 items-center mt-20">
-          <div className="flex lg:flex-row xs:flex-col gap-32 justify-center items-center">
+    <div className="flex h-auto flex-col bg-white text-black">
+      <div className="flex flex-row items-center justify-center gap-20 xs:h-auto lg:h-auto">
+        <div className="mt-20 flex flex-col items-center justify-center gap-16">
+          <div className="flex items-center justify-center gap-32 xs:flex-col lg:flex-row">
             {data.product
-              .filter((element) => element.id == prodId)
+              .filter((element) => element.id === prodId)
               .map((element) => (
                 <>
                   <Image
@@ -22,26 +21,26 @@ export default function PageProduct(props: any) {
                     key={element.id}
                     src={element.image}
                     alt={element.type}
-                    className="lg:w-full xs:w-5/6 lg:h-[30rem] xs:h-[16rem] rounded-3xl"
+                    className="rounded-3xl xs:h-[16rem] xs:w-5/6 lg:h-[30rem] lg:w-full"
                   />
-                  <div className="flex flex-col justify-center lg:items-start xs:items-center gap-4 w-3/6">
-                    <h2 className="font-bold text-2xl">{element.title}</h2>
+                  <div className="flex w-3/6 flex-col justify-center gap-4 xs:items-center lg:items-start">
+                    <h2 className="text-2xl font-bold">{element.title}</h2>
                     <p className="text-xl">U${element.price}</p>
                     <p className="text-xl text-lime-500">
                       {element.stock} in stock
                     </p>
-                    <div className="flex lg:flex-row xs:flex-row justify-center gap-2">
+                    <div className="flex justify-center gap-2 xs:flex-row lg:flex-row">
                       <Link
                         type="button"
                         href="/shop/cart"
-                        className="bg-zinc-900 text-white p-2 flex flex-row justify-center items-center text-center rounded-3xl hover:rounded-none transition-all ease-in-out"
+                        className="flex flex-row items-center justify-center rounded-3xl bg-zinc-900 p-2 text-center text-white transition-all ease-in-out hover:rounded-none"
                       >
-                       <p className="">Add to cart</p>
+                        <p className="">Add to cart</p>
                       </Link>
                       <Link
                         type="button"
                         href="#"
-                        className="bg-zinc-900 text-white p-2 flex justify-center items-center rounded-3xl hover:rounded-none transition-all ease-in-out"
+                        className="flex items-center justify-center rounded-3xl bg-zinc-900 p-2 text-white transition-all ease-in-out hover:rounded-none"
                       >
                         Finish
                       </Link>
@@ -50,12 +49,12 @@ export default function PageProduct(props: any) {
                 </>
               ))}
           </div>
-          <div className="flex justify-center items-center mb-28">
+          <div className="mb-28 flex items-center justify-center">
             {data.product
-              .filter((element) => element.id == prodId)
+              .filter((element) => element.id === prodId)
               .map((element) => (
                 <>
-                  <p className="xs:w-5/6 lg:w-full text-xl">{element.desc}</p>
+                  <p className="text-xl xs:w-5/6 lg:w-full">{element.desc}</p>
                 </>
               ))}
           </div>
@@ -63,5 +62,5 @@ export default function PageProduct(props: any) {
       </div>
       <Footer />
     </div>
-  );
+  )
 }

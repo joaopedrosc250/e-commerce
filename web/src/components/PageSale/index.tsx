@@ -1,18 +1,18 @@
-import { Product } from "../Product";
+import { Product } from '../Product'
 
 const PageSale = () => {
   return (
     <div className="grid grid-cols-2">
       <div className="grid justify-items-center">
         <Product
-          url={"#"}
-          id={"1"}
-          image={"./cap.avif"}
-          title={"cap"}
+          url={'#'}
+          id={'1'}
+          image={'./cap.avif'}
+          title={'cap'}
           price={45.95}
-          type={""}
-          size={""}
-          desc={""}
+          type={''}
+          size={''}
+          desc={''}
           stock={0}
         />
       </div>
@@ -26,7 +26,7 @@ const PageSale = () => {
         </p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default PageSale;
+export default PageSale

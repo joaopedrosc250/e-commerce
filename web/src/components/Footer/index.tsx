@@ -1,7 +1,7 @@
-"use client";
+'use client'
 
-import { GithubLogo, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";
-import Link from "next/link";
+import { GithubLogo, InstagramLogo, LinkedinLogo } from '@phosphor-icons/react'
+import Link from 'next/link'
 
 export const Footer = () => {
   return (
@@ -84,9 +84,9 @@ export const Footer = () => {
       </div>
 
       <div>
-        <span>&#169; </span>All rights reserved to{" "}
+        <span>&#169; </span>All rights reserved to{' '}
         <Link
-          href={"https://lramaral.vercel.app/"}
+          href={'https://lramaral.vercel.app/'}
           className="hover:underline"
           target="_blank"
         >
@@ -94,5 +94,5 @@ export const Footer = () => {
         </Link>
       </div>
     </div>
-  );
-};
+  )
+}

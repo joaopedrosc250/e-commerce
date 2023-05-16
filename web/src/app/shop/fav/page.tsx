@@ -1,9 +1,9 @@
-"use client"
+'use client'
 
-import data from "@/app/utils/data";
-import { Footer } from "@/components/Footer";
-import ProductCart from "@/components/ProductCart";
-import { Heart } from "@phosphor-icons/react";
+import data from '@/app/utils/data'
+import { Footer } from '@/components/Footer'
+import ProductCart from '@/components/ProductCart'
+import { Heart } from '@phosphor-icons/react'
 
 function Fav() {
   return (
@@ -31,7 +31,7 @@ function Fav() {
       </div>
       <Footer />
     </div>
-  );
+  )
 }
 
-export default Fav;
+export default Fav

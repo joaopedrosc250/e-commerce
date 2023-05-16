@@ -88,7 +88,7 @@ export default function Products(props: any) {
             <div className="mt-6 grid items-center xs:grid-cols-1 xs:gap-20 md:grid-cols-2 lg:grid-cols-4 lg:gap-10">
               {filteredProducts
                 .filter(
-                  (element) => element.type == prodType || prodType === 'all',
+                  (element) => element.type === prodType || prodType === 'all',
                 )
                 .map((element) => (
                   <Product

@@ -1,12 +1,10 @@
-"use client";
+'use client'
 
-import { Footer } from "@/components/Footer";
-import { Nav } from "@/components/Nav";
-import { User } from "@phosphor-icons/react";
+import { Footer } from '@/components/Footer'
+import { Nav } from '@/components/Nav'
+import { User } from '@phosphor-icons/react'
 
 export default function Profile(props: any) {
-  const userId = props.params.id;
-
   return (
     <div className="flex h-auto flex-col items-center justify-center bg-white text-black">
       <Nav />
@@ -15,11 +13,11 @@ export default function Profile(props: any) {
           <User size={42} className="" />
           <p>User</p>
         </div>
-        <div className="flex flex-col items-center justify-center mt-10">
+        <div className="mt-10 flex flex-col items-center justify-center">
           <h2 className="font-semibold">Recent</h2>
         </div>
       </div>
       <Footer />
     </div>
-  );
+  )
 }

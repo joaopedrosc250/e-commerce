@@ -1,9 +1,9 @@
-import { Form } from "@/components/Form"
+import { Form } from '@/components/Form'
 
 export default function Sign() {
   return (
-    <div className=''>
-    <Form />
+    <div className="">
+      <Form />
     </div>
   )
 }

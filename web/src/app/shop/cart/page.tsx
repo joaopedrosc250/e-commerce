@@ -1,10 +1,9 @@
-"use client";
+'use client'
 
-import data from "@/app/utils/data";
-import { Footer } from "@/components/Footer";
-import { Nav } from "@/components/Nav";
-import ProductCart from "@/components/ProductCart";
-import { ShoppingCart } from "@phosphor-icons/react";
+import data from '@/app/utils/data'
+import { Footer } from '@/components/Footer'
+import ProductCart from '@/components/ProductCart'
+import { ShoppingCart } from '@phosphor-icons/react'
 
 export default function Cart() {
   return (
@@ -32,5 +31,5 @@ export default function Cart() {
       </div>
       <Footer />
     </div>
-  );
+  )
 }
