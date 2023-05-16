@@ -1,5 +1,5 @@
-import { CartProps } from "@/@types/cart";
-import Image from "next/image";
+import { CartProps } from '@/@types/cart'
+import Image from 'next/image'
 
 export default function Cart({ id, title, price, image }: CartProps) {
   return (
@@ -8,12 +8,18 @@ export default function Cart({ id, title, price, image }: CartProps) {
       className="flex flex-row items-center justify-center  gap-4 text-black"
     >
       <div>
-        <Image src={image} width={120} height={20} alt="image" className="object-contain"></Image>
+        <Image
+          src={image}
+          width={120}
+          height={20}
+          alt="image"
+          className="object-contain"
+        ></Image>
       </div>
       <div>
         <p className="font-bold">{title}</p>
         <p>U$ {price}</p>
       </div>
     </div>
-  );
+  )
 }

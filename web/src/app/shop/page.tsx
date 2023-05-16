@@ -1,9 +1,9 @@
-"use client";
+'use client'
 
-import { Footer } from "@/components/Footer";
-import { Product } from "@/components/Product";
-import Link from "next/link";
-import data from "../utils/data";
+import { Footer } from '@/components/Footer'
+import { Product } from '@/components/Product'
+import Link from 'next/link'
+import data from '../utils/data'
 
 export default function All() {
   return (
@@ -32,11 +32,11 @@ export default function All() {
             <h3 className="text-xl font-bold">T-shirts</h3>
             <div className="mt-6 grid items-center xs:grid-cols-1 xs:gap-20 md:grid-cols-2 lg:grid-cols-4 lg:gap-10">
               {data.product
-                .filter((element) => element.type == "tshirt")
+                .filter((element) => element.type === 'tshirt')
                 .slice(0, 4)
                 .map(
                   (
-                    element //const linha 65
+                    element, // const linha 65
                   ) => (
                     <Product
                       url={element.url}
@@ -45,12 +45,12 @@ export default function All() {
                       image={element.image}
                       title={element.title}
                       price={element.price}
-                      type={""}
-                      size={""}
-                      desc={""}
+                      type={''}
+                      size={''}
+                      desc={''}
                       stock={0}
                     />
-                  )
+                  ),
                 )}
             </div>
             <Link
@@ -64,7 +64,7 @@ export default function All() {
             <h3 className="mt-16 text-xl font-bold">Caps</h3>
             <div className="mt-6 grid items-center xs:grid-cols-1 xs:gap-20 md:grid-cols-2 lg:grid-cols-4 lg:gap-10">
               {data.product
-                .filter((element) => element.type == "cap")
+                .filter((element) => element.type === 'cap')
                 .slice(0, 4)
                 .map((element) => (
                   <Product
@@ -74,9 +74,9 @@ export default function All() {
                     image={element.image}
                     title={element.title}
                     price={element.price}
-                    type={""}
-                    size={""}
-                    desc={""}
+                    type={''}
+                    size={''}
+                    desc={''}
                     stock={0}
                   />
                 ))}
@@ -92,7 +92,7 @@ export default function All() {
             <h3 className="mt-16 text-xl font-bold">Shoes</h3>
             <div className="mt-6 grid justify-items-center xs:grid-cols-1 xs:gap-20 md:grid-cols-2 lg:grid-cols-4 lg:gap-10">
               {data.product
-                .filter((element) => element.type == "shoe")
+                .filter((element) => element.type === 'shoe')
                 .slice(0, 4)
                 .map((element) => (
                   <Product
@@ -102,9 +102,9 @@ export default function All() {
                     image={element.image}
                     title={element.title}
                     price={element.price}
-                    type={""}
-                    size={""}
-                    desc={""}
+                    type={''}
+                    size={''}
+                    desc={''}
                     stock={0}
                   />
                 ))}
@@ -120,5 +120,5 @@ export default function All() {
       </div>
       <Footer />
     </div>
-  );
+  )
 }

@@ -1,6 +1,5 @@
-import Link from "next/link";
-import { SearchProps } from "@/@types/search";
-
+import Link from 'next/link'
+import { SearchProps } from '@/@types/search'
 
 export const ProductSearch = ({ url, id, title }: SearchProps) => {
   return (
@@ -9,5 +8,5 @@ export const ProductSearch = ({ url, id, title }: SearchProps) => {
         <p className="text-lg">{title}</p>
       </Link>
     </div>
-  );
-};
+  )
+}
