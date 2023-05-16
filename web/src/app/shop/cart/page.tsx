@@ -25,6 +25,7 @@ export default function Cart() {
                 image={element.image}
                 title={element.title}
                 price={element.price}
+                unity={element.stock}
               />
             ))}
         </div>
