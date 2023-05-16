@@ -1,5 +1,3 @@
-'use client'
-
 import { Footer } from '@/components/Footer'
 import { Product } from '@/components/Product'
 import Link from 'next/link'

@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 
-export const Form = () => {
+export const Login = () => {
   const [showPassword, setShowPassword] = useState(false)
 
   const togglePasswordVisibility = () => {
@@ -24,30 +24,14 @@ export const Form = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center gap-10 xs:w-2/3 lg:w-full">
+      <div className="flex w-full flex-col items-center justify-center gap-10">
         <div className="flex flex-col items-center justify-center gap-8 rounded-2xl bg-white p-8 shadow-2xl xs:w-full lg:h-2/4 lg:w-2/4">
-          <h2 className="text-2xl">Create your account</h2>
+          <h2 className="text-2xl">Access your account</h2>
           <form
             action=""
             method="post"
             className="flex flex-col items-start justify-center gap-1"
           >
-            <label className="mt-3 font-semibold">First name: </label>
-            <input
-              type="text"
-              id="first"
-              title="name"
-              className="rounded-xl border-2 p-2 px-4 focus:outline-zinc-300"
-              required
-            />
-            <label className="mt-3 font-semibold">Last name: </label>
-            <input
-              type="text"
-              title="name"
-              id="last"
-              className="rounded-xl border-2 p-2 px-4 focus:outline-zinc-300"
-              required
-            />
             <label className="mt-3 font-semibold">E-mail: </label>
             <input
               type="text"
@@ -77,13 +61,13 @@ export const Form = () => {
             value="Send"
             className="rounded-xl bg-blue-600 p-2 text-white transition-all ease-in-out hover:rounded-none hover:bg-black"
           >
-            Submit
+            Enter
           </button>
         </div>
         <div className="flex flex-row gap-1">
-          <p>I have an account.</p>
-          <Link href={'/home/login'} className="text-blue-600">
-            Sign in.
+          <p>Dont have an account?</p>
+          <Link href={'/home'} className="text-blue-600">
+            Register now.
           </Link>
         </div>
       </div>

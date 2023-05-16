@@ -22,11 +22,11 @@ export const Nav = () => {
           <Link className="hover:underline" href="/shop">
             Categories
           </Link>
-          <Link className="hover:underline" href="#">
+          <Link className="hover:underline" href="/home/login">
             Sign in
           </Link>
-          <Link className="font-bold hover:underline" href="/home/sign">
-            Sign up
+          <Link className="font-bold hover:underline" href="/home">
+            Register
           </Link>
           <Link className="" href="/shop/cart">
             <ShoppingCart size={30} />
@@ -52,10 +52,10 @@ export const Nav = () => {
             <Link className="hover:underline" href="/shop">
               Categories
             </Link>
-            <Link className="hover:underline" href="#">
+            <Link className="hover:underline" href="/home/login">
               Sign in
             </Link>
-            <Link className="font-bold hover:underline" href="/home/sign">
+            <Link className="font-bold hover:underline" href="/home">
               Sign up
             </Link>
             <Link className="" href="/shop/cart">
