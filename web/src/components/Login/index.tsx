@@ -25,7 +25,7 @@ export const Login = () => {
         </div>
       </div>
       <div className="flex w-full flex-col items-center justify-center gap-10">
-        <div className="flex flex-col items-center justify-center gap-8 rounded-2xl bg-white p-8 shadow-2xl xs:w-full lg:h-2/4 lg:w-2/4">
+        <div className="flex flex-col items-center justify-center gap-8 rounded-2xl bg-white p-8 font-alt shadow-2xl xs:w-full lg:h-2/4 lg:w-2/4">
           <h2 className="text-2xl">Access your account</h2>
           <form
             action=""
@@ -59,14 +59,17 @@ export const Login = () => {
             title="submit"
             type="submit"
             value="Send"
-            className="rounded-xl bg-blue-600 p-2 text-white transition-all ease-in-out hover:rounded-none hover:bg-black"
+            className="rounded-xl bg-blue-600 p-2 text-white transition-colors ease-in-out hover:rounded-none hover:bg-black"
           >
             Enter
           </button>
         </div>
         <div className="flex flex-row gap-1">
           <p>Dont have an account?</p>
-          <Link href={'/home'} className="text-blue-600">
+          <Link
+            href={'/home'}
+            className="text-blue-600 transition-colors hover:text-blue-700 hover:underline"
+          >
             Register now.
           </Link>
         </div>

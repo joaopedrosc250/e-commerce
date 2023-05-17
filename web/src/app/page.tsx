@@ -7,10 +7,10 @@ import data from './utils/data'
 
 export default function Main() {
   return (
-    <div id="" className="flex flex-col bg-white">
+    <div id="" className="flex flex-col bg-white  ">
       <Nav />
       <Slider />
-      <div className="grid gap-24 xs:h-auto xs:grid-cols-1 xs:p-16 lg:h-auto lg:grid-cols-4 lg:p-20">
+      <div className="grid gap-24 font-alt xs:h-auto xs:grid-cols-1 xs:p-16 lg:h-auto lg:grid-cols-4 lg:p-20">
         <div className="xs:col-span-1 lg:col-span-4">
           <div className="grid justify-items-center">
             <h3 className="text-xl font-bold xs:mt-0 lg:mt-12">T-shirts</h3>
@@ -89,7 +89,7 @@ export default function Main() {
           <div className="grid justify-items-center">
             <Link
               href="/shop"
-              className="rounded-3xl bg-zinc-900 p-2 font-semibold text-white transition-all ease-in-out hover:rounded-none"
+              className="rounded-3xl bg-zinc-900 p-2 font-sans font-semibold text-white transition-all ease-in-out hover:rounded-none"
             >
               See all the products
             </Link>

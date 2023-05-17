@@ -8,7 +8,7 @@ export default function PageProduct(props: any) {
 
   return (
     <div className="flex h-auto flex-col bg-white text-black">
-      <div className="flex flex-row items-center justify-center gap-20 xs:h-auto lg:h-auto">
+      <div className="flex flex-row items-center justify-center gap-20 font-alt xs:h-auto lg:h-auto">
         <div className="mt-20 flex flex-col items-center justify-center gap-16">
           <div className="flex items-center justify-center gap-32 xs:flex-col lg:flex-row">
             {data.product

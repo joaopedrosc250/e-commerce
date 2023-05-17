@@ -1,11 +1,19 @@
 import { ReactNode } from 'react'
 import './globals.css'
-import { Vollkorn } from '@next/font/google'
+import { Vollkorn as Vollk, Kumbh_Sans as Kumbh } from '@next/font/google'
 
-const vollkorn = Vollkorn({
+const vollkorn = Vollk({
   subsets: ['latin'],
   display: 'swap',
   weight: '500',
+  variable: '--font-vollk',
+})
+
+const kumbhsans = Kumbh({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: '500',
+  variable: '--font-kumbh',
 })
 
 export const metadata = {
@@ -15,7 +23,10 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="pt-br" className={`${vollkorn.className}`}>
+    <html
+      lang="pt-br"
+      className={`${vollkorn.variable} ${kumbhsans.variable} font-sans`}
+    >
       <body
         className={`bg-white text-black scrollbar-thin scrollbar-track-white scrollbar-thumb-slate-300`}
       >

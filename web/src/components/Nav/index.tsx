@@ -12,7 +12,7 @@ export const Nav = () => {
     <nav className="w-full bg-white p-4 text-black">
       <div className=" flex w-full p-2 xs:flex-row xs:items-center xs:justify-center xs:gap-10 md:gap-[30vh] lg:flex-row lg:items-center lg:justify-center lg:gap-56">
         <div className="flex items-center justify-center xs:flex-col xs:gap-1 lg:flex-row lg:gap-40 ">
-          <Link href="/" className="text-3xl">
+          <Link href="/" className="text-4xl">
             UrbanAvenue
           </Link>
           <Search />

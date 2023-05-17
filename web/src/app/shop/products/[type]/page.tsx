@@ -82,7 +82,7 @@ export default function Products(props: any) {
             bestHigherPrice={bestHigherPrice}
           />
         </div>
-        <div className="xs:col-span-1 lg:col-span-3">
+        <div className="font-alt xs:col-span-1 lg:col-span-3">
           <div className="grid justify-items-center">
             <h3 className="mb-5 text-2xl font-bold">{title}</h3>
             <div className="mt-6 grid items-center xs:grid-cols-1 xs:gap-20 md:grid-cols-2 lg:grid-cols-4 lg:gap-10">
