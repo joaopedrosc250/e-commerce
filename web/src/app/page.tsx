@@ -7,7 +7,7 @@ import data from './utils/data'
 
 export default function Main() {
   return (
-    <div id="" className="flex flex-col bg-white text-black">
+    <div id="" className="flex flex-col bg-white">
       <Nav />
       <Slider />
       <div className="grid gap-24 xs:h-auto xs:grid-cols-1 xs:p-16 lg:h-auto lg:grid-cols-4 lg:p-20">

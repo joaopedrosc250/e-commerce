@@ -11,8 +11,8 @@ export const Login = () => {
   }
 
   return (
-    <div className="flex items-center justify-center gap-6 bg-white text-black xs:h-auto xs:flex-col xs:p-5 lg:h-screen lg:flex-row lg:p-0">
-      <div className="flex w-full flex-row xs:items-center xs:justify-center lg:items-start lg:justify-start">
+    <div className="grid h-screen justify-items-center gap-5 xs:grid-cols-1 xs:p-5 lg:grid-cols-2 lg:p-0">
+      <div className="flex w-full flex-row xs:items-center xs:justify-center lg:items-center lg:justify-center">
         <div className="flex w-full flex-col items-center justify-center gap-6">
           <Link href="/">
             <h1 className="xs:text-4xl lg:text-5xl">UrbanAvenue</h1>

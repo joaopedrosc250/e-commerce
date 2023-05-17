@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-br" className={`${vollkorn.className}`}>
       <body
-        className={`bg-white scrollbar-thin scrollbar-track-white scrollbar-thumb-slate-300`}
+        className={`bg-white text-black scrollbar-thin scrollbar-track-white scrollbar-thumb-slate-300`}
       >
         {children}
       </body>

@@ -1,14 +1,14 @@
+/* eslint-disable prettier/prettier */
 import fastify from 'fastify'
-import { PrismaClient } from '@prisma/client'
+import cors from '@fastify/cors'
+import { productRoutes } from './routes/products'
 
 const app = fastify()
-const prisma = new PrismaClient()
 
-app.get('/users', async () => {
-  const users = await prisma.users.findMany()
-
-  return users
+app.register(cors, {
+  origin: true, // todas urls de front end poderão acessar o nosso backend
 })
+app.register(productRoutes)
 
 // Porta para o localhost, em ambiente de desenvolvimento
 
