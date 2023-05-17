@@ -4,10 +4,11 @@ import Link from 'next/link'
 import { Nav } from '@/components/Nav'
 import { Product } from '@/components/Product'
 import data from './utils/data'
+import About from '@/components/About'
 
 export default function Main() {
   return (
-    <div id="" className="flex flex-col bg-white  ">
+    <div id="" className="flex flex-col items-center justify-center bg-white  ">
       <Nav />
       <Slider />
       <div className="grid gap-24 font-alt xs:h-auto xs:grid-cols-1 xs:p-16 lg:h-auto lg:grid-cols-4 lg:p-20">
@@ -96,6 +97,7 @@ export default function Main() {
           </div>
         </div>
       </div>
+      <About />
       <Footer />
     </div>
   )

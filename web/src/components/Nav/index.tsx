@@ -18,7 +18,7 @@ export const Nav = () => {
           <Search />
         </div>
 
-        <div className="items-end justify-center gap-6 xs:hidden lg:flex lg:flex-row ">
+        <div className="items-end justify-center gap-6 font-alt xs:hidden lg:flex lg:flex-row ">
           <Link className="hover:underline" href="/shop">
             Categories
           </Link>
@@ -47,7 +47,7 @@ export const Nav = () => {
         </div>
       </div>
       {menuOpen && (
-        <div className="h-[calc(100vh - 101px)] absolute left-0 top-32 w-full bg-white lg:hidden">
+        <div className="h-[calc(100vh - 101px)] absolute left-0 top-32 w-full bg-white font-alt lg:hidden">
           <div className="flex flex-col items-center justify-center gap-2">
             <Link className="hover:underline" href="/shop">
               Categories

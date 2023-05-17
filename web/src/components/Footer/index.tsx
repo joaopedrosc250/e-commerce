@@ -9,9 +9,11 @@ export const Footer = () => {
       <div className="grid w-full xs:grid-cols-1 xs:justify-items-center xs:gap-6 md:w-5/6 md:grid-cols-3 md:justify-items-center lg:w-3/4 lg:grid-cols-3 lg:justify-items-center">
         <div className="flex flex-col items-center justify-center">
           <h1 className="text-3xl">UrbanAvenue</h1>
-          <p>Streetwear shop online: style meets comfort.</p>
+          <p className="font-alt">
+            Streetwear shop online: style meets comfort.
+          </p>
         </div>
-        <div className="flex justify-center gap-4">
+        <div className="flex justify-center gap-4 font-alt">
           <ul className="flex flex-row justify-center gap-2 xs:items-center lg:items-center">
             <li>
               <Link
@@ -83,7 +85,7 @@ export const Footer = () => {
         </div>
       </div>
 
-      <div>
+      <div className="font-alt">
         <span>&#169; </span>All rights reserved to{' '}
         <Link
           href={'https://lramaral.vercel.app/'}

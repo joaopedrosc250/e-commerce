@@ -17,9 +17,8 @@ export const Form = () => {
           <Link href="/">
             <h1 className="xs:text-4xl lg:text-5xl">UrbanAvenue</h1>
           </Link>
-          <p className="text-justify xs:w-3/4 xs:text-lg lg:w-4/6 lg:text-xl">
-            Discover the latest trends in urban fashion. With easy browsing,
-            join us on the streetwear movement and elevate your wardrobe with
+          <p className="text-justify font-alt xs:w-3/4 xs:text-lg lg:w-[446px] lg:text-lg">
+            Join us on the streetwear movement and elevate your wardrobe with
             our trendy and comfortable pieces.
           </p>
         </div>

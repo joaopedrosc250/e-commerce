@@ -12,9 +12,7 @@ export default function All() {
             <strong className="">Categories</strong>
             <ul className="flex flex-col items-center justify-center gap-2">
               <li>
-                <a href="#tshirts" className="">
-                  T-shirts
-                </a>
+                <a href="#tshirts">T-shirts</a>
               </li>
               <li>
                 <a href="#caps">Caps </a>

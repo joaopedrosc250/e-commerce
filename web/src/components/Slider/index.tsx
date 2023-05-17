@@ -1,13 +1,11 @@
-'use client'
-
 import Image from 'next/image'
 
 export const Slider = () => {
   const images = [
     '/model-10.jpg',
-    '/model-11.jpg',
-    '/model-7.jpg',
     '/model-6.jpg',
+    '/model-7.jpg',
+    '/model-11.jpg',
   ]
 
   return (
