@@ -8,7 +8,7 @@ export const Product = ({ url, id, image, title, price }: ProductProps) => {
       <Link href={url} className="grid justify-items-center gap-2">
         <Image
           src={image}
-          className="h-60 w-full rounded-3xl object-cover transition-all hover:scale-95 hover:rounded-none"
+          className="h-60 w-full rounded-3xl object-cover transition-all"
           alt="image"
           width={1920}
           height={1080}
