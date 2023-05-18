@@ -5,6 +5,14 @@ import { Footer } from '@/components/Footer'
 import { Product } from '@/components/Product'
 import { useEffect, useState } from 'react'
 import data from '@/app/utils/data'
+import {
+  Best,
+  handleResetClick,
+  lowestPrice,
+  higherPrice,
+  bestLowestPrice,
+  bestHigherPrice,
+} from '../../../../functions/ProductFilters'
 
 export default function Products(props: any) {
   const [title, setTitle] = useState('')
@@ -25,61 +33,29 @@ export default function Products(props: any) {
     }
   }, [prodType])
 
-  function Best(size: string) {
-    const filtered = data.product.filter((product) => product.size === size)
-    setFilteredProducts(filtered)
-  }
-
-  function handleResetClick() {
-    console.log('resetou')
-    setFilteredProducts(data.product)
-  }
-
-  function lowestPrice(minPrice: number, maxPrice: number) {
-    const filtered = data.product.filter(
-      (product) => product.price >= minPrice && product.price <= maxPrice,
-    )
-    setFilteredProducts(filtered)
-  }
-
-  function higherPrice(minPrice: number, maxPrice: number) {
-    const filtered = data.product.filter(
-      (product) => product.price >= minPrice && product.price <= maxPrice,
-    )
-    setFilteredProducts(filtered)
-  }
-
-  function bestLowestPrice(minPrice: number, maxPrice: number, size: string) {
-    const filtered = data.product.filter(
-      (product) =>
-        product.price >= minPrice &&
-        product.price <= maxPrice &&
-        product.size === size,
-    )
-    setFilteredProducts(filtered)
-  }
-
-  function bestHigherPrice(minPrice: number, maxPrice: number, size: string) {
-    const filtered = data.product.filter(
-      (product) =>
-        product.price >= minPrice &&
-        product.price <= maxPrice &&
-        product.size === size,
-    )
-    setFilteredProducts(filtered)
-  }
-
   return (
     <div id="" className="flex flex-col bg-white text-black">
       <div className="grid gap-24 p-20 xs:h-auto xs:grid-cols-1 lg:h-auto lg:grid-cols-4">
         <div className="col-span-1">
           <Filter
-            Best={data.product ? (size) => Best(size) : Best}
-            onReset={handleResetClick}
-            lowestPrice={lowestPrice}
-            higherPrice={higherPrice}
-            bestLowestPrice={bestLowestPrice}
-            bestHigherPrice={bestHigherPrice}
+            Best={(size: string) => Best(size, setFilteredProducts)}
+            onReset={() => handleResetClick(setFilteredProducts)}
+            lowestPrice={(minPrice: number, maxPrice: number) =>
+              lowestPrice(minPrice, maxPrice, setFilteredProducts)
+            }
+            higherPrice={(minPrice: number, maxPrice: number) =>
+              higherPrice(minPrice, maxPrice, setFilteredProducts)
+            }
+            bestLowestPrice={(
+              minPrice: number,
+              maxPrice: number,
+              size: string,
+            ) => bestLowestPrice(minPrice, maxPrice, size, setFilteredProducts)}
+            bestHigherPrice={(
+              minPrice: number,
+              maxPrice: number,
+              size: string,
+            ) => bestHigherPrice(minPrice, maxPrice, size, setFilteredProducts)}
           />
         </div>
         <div className="font-alt xs:col-span-1 lg:col-span-3">

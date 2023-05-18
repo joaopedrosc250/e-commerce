@@ -1,7 +1,8 @@
 import { Footer } from '@/components/Footer'
 import Image from 'next/image'
 import data from '../../../utils/data'
-import Link from 'next/link'
+import DescProduct from '@/components/DescProduct'
+import PageProductInfo from '@/components/PageProductInfo'
 
 export default function PageProduct(props: any) {
   const prodId = props.params.id
@@ -23,41 +24,20 @@ export default function PageProduct(props: any) {
                     alt={element.type}
                     className="rounded-3xl xs:h-[16rem] xs:w-5/6 lg:h-[30rem] lg:w-full"
                   />
-                  <div className="flex w-3/6 flex-col justify-center gap-4 xs:items-center lg:items-start">
-                    <h2 className="text-2xl font-bold">{element.title}</h2>
-                    <p className="text-xl">U${element.price}</p>
-                    <p className="text-xl text-lime-500">
-                      {element.stock} in stock
-                    </p>
-                    <div className="flex justify-center gap-2 xs:flex-row lg:flex-row">
-                      <Link
-                        type="button"
-                        href="/shop/cart"
-                        className="flex flex-row items-center justify-center rounded-3xl bg-zinc-900 p-2 text-center text-white transition-all ease-in-out hover:rounded-none"
-                      >
-                        <p className="">Add to cart</p>
-                      </Link>
-                      <Link
-                        type="button"
-                        href="#"
-                        className="flex items-center justify-center rounded-3xl bg-zinc-900 p-2 text-white transition-all ease-in-out hover:rounded-none"
-                      >
-                        Finish
-                      </Link>
-                    </div>
-                  </div>
+                  <PageProductInfo
+                    id={prodId}
+                    title={element.title}
+                    price={element.price}
+                    stock={element.stock}
+                  />
                 </>
               ))}
           </div>
-          <div className="mb-28 flex items-center justify-center">
-            {data.product
-              .filter((element) => element.id === prodId)
-              .map((element) => (
-                <>
-                  <p className="text-xl xs:w-5/6 lg:w-full">{element.desc}</p>
-                </>
-              ))}
-          </div>
+          {data.product
+            .filter((element) => element.id === prodId)
+            .map((element) => (
+              <DescProduct key={prodId} desc={element.desc} id={prodId} />
+            ))}
         </div>
       </div>
       <Footer />

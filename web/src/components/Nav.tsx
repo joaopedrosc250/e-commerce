@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Search } from '../Search'
+import { Search } from './Search'
 import { Heart, List, ShoppingCart, X } from '@phosphor-icons/react'
 import { useState } from 'react'
 
@@ -17,7 +17,6 @@ export const Nav = () => {
           </Link>
           <Search />
         </div>
-
         <div className="items-end justify-center gap-6 font-alt xs:hidden lg:flex lg:flex-row ">
           <Link className="hover:underline" href="/shop">
             Categories
