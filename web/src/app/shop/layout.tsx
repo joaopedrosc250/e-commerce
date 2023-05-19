@@ -9,7 +9,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <>
-      <Nav />
+      <Nav id={''} quantity={0} />
       <div>{children}</div>
     </>
   )
