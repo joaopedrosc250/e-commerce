@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ProductProps } from '@/@types/product'
 import { Plus } from '@phosphor-icons/react'
-import { useShoppingCart } from '@/context/shoppingCartContext'
+import { useShoppingCart } from '../components/ShoppingCartContext'
 
 export const Product = ({
   url,
@@ -12,7 +12,6 @@ export const Product = ({
   image,
   title,
   price,
-  quantity,
 }: ProductProps & { selectedProductId: number }) => {
   const {
     getItemQuantity,

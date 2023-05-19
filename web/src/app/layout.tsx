@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import './globals.css'
 import { Vollkorn as Vollk, Kumbh_Sans as Kumbh } from '@next/font/google'
-import { ShoppingCartProvider } from '@/context/shoppingCartContext'
+import { ShoppingCartProvider } from '../components/ShoppingCartContext'
 
 const vollkorn = Vollk({
   subsets: ['latin'],
