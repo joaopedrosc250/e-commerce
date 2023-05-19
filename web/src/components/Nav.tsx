@@ -3,16 +3,16 @@
 import Link from 'next/link'
 import { Search } from './Search'
 import { Heart, List, ShoppingCart, X } from '@phosphor-icons/react'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { ItemCartProps } from '@/@types/item'
 
 export const Nav = ({ id, quantity }: ItemCartProps) => {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [cartItems, setCartItems] = useState([])
+  // const [cartItems, setCartItems] = useState([])
 
-  useEffect(() => {
-    setCartItems(cartItems)
-  })
+  // useEffect(() => {
+  //   setCartItems(cartItems)
+  // })
 
   return (
     <nav className="w-full bg-white p-4 text-black">
@@ -34,7 +34,7 @@ export const Nav = ({ id, quantity }: ItemCartProps) => {
             Register
           </Link>
           <Link className="flex flex-row" href="/shop/cart">
-            <ShoppingCart size={30} />1{cartItems}
+            <ShoppingCart size={30} />1
           </Link>
           <Link className="" href="/shop/fav">
             <Heart size={30} />

@@ -46,7 +46,7 @@ export const Slider = () => {
             </div>
           ))}
 
-          <div className="absolute text-white xs:left-12 xs:top-28 xs:text-md lg:left-28 lg:top-[37vh] lg:text-6xl">
+          <div className="xs:text-md absolute text-white xs:left-12 xs:top-28 lg:left-28 lg:top-[37vh] lg:text-6xl">
             <span className="underline decoration-blue-500 underline-offset-4">
               {frases[ifrase]}
             </span>{' '}
