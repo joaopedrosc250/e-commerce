@@ -20,7 +20,7 @@ function PageProductInfo({ id, title, price, stock }: PageProductProps) {
         <Heart size={28} />
       </button>
       <h2 className="text-2xl font-bold">{title}</h2>
-      <p className="text-xl">U${price}</p>
+      <p className="text-xl">$ {price}</p>
       <p className="text-xl text-lime-500">{stock} in stock</p>
 
       <div className="flex justify-center gap-2 xs:flex-row lg:flex-row">

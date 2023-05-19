@@ -26,13 +26,14 @@ function CategoriesProducts() {
                   size={''}
                   desc={''}
                   stock={0}
+                  quantity={0}
                 />
               ),
             )}
         </div>
         <Link
           href="/shop/products/tshirt"
-          className="w-fit rounded-3xl bg-slate-900 p-2 font-sans font-semibold text-white transition-all ease-in-out hover:rounded-none"
+          className="mt-4 w-fit bg-slate-800 p-2 font-semibold text-white transition-colors ease-in-out hover:bg-zinc-950"
         >
           See more
         </Link>
@@ -55,12 +56,13 @@ function CategoriesProducts() {
                 size={''}
                 desc={''}
                 stock={0}
+                quantity={0}
               />
             ))}
         </div>
         <Link
           href="/shop/products/cap"
-          className="w-fit rounded-3xl bg-slate-900 p-2 font-sans font-semibold text-white transition-all ease-in-out hover:rounded-none"
+          className="mt-4 w-fit bg-slate-800 p-2 font-semibold text-white transition-colors ease-in-out hover:bg-zinc-950"
         >
           See more
         </Link>
@@ -83,12 +85,13 @@ function CategoriesProducts() {
                 size={''}
                 desc={''}
                 stock={0}
+                quantity={0}
               />
             ))}
         </div>
         <Link
           href="/shop/products/shoe"
-          className="w-fit rounded-3xl bg-slate-900 p-2 font-sans font-semibold text-white transition-all ease-in-out hover:rounded-none"
+          className="mt-4 w-fit bg-slate-800 p-2 font-semibold text-white transition-colors ease-in-out hover:bg-zinc-950"
         >
           See more
         </Link>

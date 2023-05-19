@@ -8,4 +8,5 @@ export interface ProductProps {
   desc: string
   stock: number
   price: number
+  quantity: number
 }

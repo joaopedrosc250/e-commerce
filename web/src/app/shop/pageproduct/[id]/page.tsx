@@ -22,7 +22,7 @@ export default function PageProduct(props: any) {
                     key={element.id}
                     src={element.image}
                     alt={element.type}
-                    className="pointer-events-none rounded-3xl xs:h-[16rem] xs:w-5/6 lg:h-[30rem] lg:w-full"
+                    className="pointer-events-none xs:h-[16rem] xs:w-5/6 lg:h-[30rem] lg:w-full"
                   />
                   <PageProductInfo
                     id={prodId}

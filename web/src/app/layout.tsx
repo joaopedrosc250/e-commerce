@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 import './globals.css'
 import { Vollkorn as Vollk, Kumbh_Sans as Kumbh } from '@next/font/google'
+import { ShoppingCartProvider } from '@/context/shoppingCartContext'
 
 const vollkorn = Vollk({
   subsets: ['latin'],
@@ -24,13 +25,13 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
-      lang="pt-br"
+      lang="en"
       className={`${vollkorn.variable} ${kumbhsans.variable} font-sans`}
     >
       <body
         className={`bg-white text-black scrollbar-thin scrollbar-track-white scrollbar-thumb-slate-300`}
       >
-        {children}
+        <ShoppingCartProvider>{children}</ShoppingCartProvider>
       </body>
     </html>
   )

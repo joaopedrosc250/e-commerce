@@ -32,6 +32,7 @@ export default function Main() {
                         size={element.size}
                         desc={element.desc}
                         stock={0}
+                        quantity={0}
                       />
                     ),
                 )}
@@ -57,6 +58,7 @@ export default function Main() {
                     size={element.size}
                     desc={element.desc}
                     stock={0}
+                    quantity={0}
                   />
                 ))}
             </div>
@@ -82,6 +84,7 @@ export default function Main() {
                     size={element.size}
                     desc={element.desc}
                     stock={0}
+                    quantity={0}
                   />
                 ))}
             </div>
@@ -90,7 +93,7 @@ export default function Main() {
           <div className="grid justify-items-center">
             <Link
               href="/shop"
-              className="rounded-3xl bg-zinc-900 p-2 font-sans font-semibold text-white transition-all ease-in-out hover:rounded-none"
+              className="bg-zinc-800 p-2 font-sans font-semibold text-white transition-colors ease-in-out hover:bg-zinc-950"
             >
               See all the products
             </Link>

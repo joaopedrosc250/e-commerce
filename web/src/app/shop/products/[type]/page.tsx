@@ -76,6 +76,7 @@ export default function Products(props: any) {
                     size={''}
                     desc={''}
                     stock={0}
+                    quantity={0}
                   />
                 ))}
             </div>
