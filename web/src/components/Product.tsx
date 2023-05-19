@@ -37,23 +37,25 @@ export const Product = ({
       <p className="mb-1 text-center">$ {price}</p>
       <div className="mt-auto w-full text-white">
         {unit === 0 ? (
-          <div className="flex flex-row items-center justify-center gap-1 bg-blue-600">
-            <Plus size={20} />
-            <button onClick={() => increaseCartContent(id)} title="button">
-              add to cart
-            </button>
-          </div>
+          <button
+            onClick={() => increaseCartContent(id)}
+            title="button"
+            className="flex w-full flex-row items-center justify-center gap-1 bg-blue-600 transition-colors hover:bg-blue-700"
+          >
+            <Plus size={18} />
+            add to cart
+          </button>
         ) : (
           <div className="flex flex-col items-center gap-2 text-black">
             <div className="flex items-center justify-center gap-2">
-              <button title="button" onClick={() => increaseCartContent(id)}>
-                +
+              <button title="button" onClick={() => decreaseCartContent(id)}>
+                -
               </button>
               <div>
                 <span className="text-xl">{unit}</span> in cart
               </div>
-              <button title="button" onClick={() => decreaseCartContent(id)}>
-                -
+              <button title="button" onClick={() => increaseCartContent(id)}>
+                +
               </button>
             </div>
             <button

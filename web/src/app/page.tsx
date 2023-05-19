@@ -8,13 +8,13 @@ import About from '@/components/About'
 
 export default function Main() {
   return (
-    <div id="" className="flex flex-col items-center justify-center bg-white  ">
+    <div id="" className="flex flex-col items-center justify-center bg-white">
       <Nav id={''} quantity={0} />
       <Slider />
       <div className="grid gap-24 font-alt xs:h-auto xs:grid-cols-1 xs:p-16 lg:h-auto lg:grid-cols-4 lg:p-20">
         <div className="xs:col-span-1 lg:col-span-4">
           <div className="grid justify-items-center">
-            <h3 className="text-xl font-bold xs:mt-0 lg:mt-12">T-shirts</h3>
+            <h3 className="text-xl font-bold">T-shirts</h3>
             <div className="mt-6 grid w-5/6 items-center xs:grid-cols-1 xs:gap-20 md:grid-cols-2 lg:grid-cols-4 lg:gap-16">
               {data.product
                 .slice(0, 4)

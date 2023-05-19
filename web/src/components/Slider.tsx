@@ -1,10 +1,32 @@
+'use client'
+
 import Image from 'next/image'
+import { useState } from 'react'
 
 export const Slider = () => {
+  const [frases, setFrases] = useState([
+    'Discover',
+    'Iconic',
+    'Sleek',
+    'Sophisticated',
+    'Inspire',
+    'Innovate',
+    'Flawless',
+  ])
+  const [ifrase, setifrase] = useState(0)
+
+  const proxFrase = () => {
+    setifrase((ifrase + 1) % frases.length)
+  }
+
+  setTimeout(() => {
+    proxFrase()
+  }, 3000)
+
   const images = [
-    '/model-10.jpg',
+    '/model-12.jpg',
+    '/model-13.jpg',
     '/model-6.jpg',
-    '/model-7.jpg',
     '/model-11.jpg',
   ]
 
@@ -23,11 +45,21 @@ export const Slider = () => {
               />
             </div>
           ))}
-          <h1 className="absolute text-white xs:left-16 xs:top-24 xs:text-3xl lg:left-40 lg:top-1/2 lg:text-6xl">
-            <span className="underline underline-offset-4">Discover</span> new
-            trends
-            <p className="xs:text-xl lg:text-4xl">Feels the vibe</p>
-          </h1>
+
+          <div className="absolute text-white xs:left-12 xs:top-28 xs:text-md lg:left-28 lg:top-[37vh] lg:text-6xl">
+            <span className="underline decoration-blue-500 underline-offset-4">
+              {frases[ifrase]}
+            </span>{' '}
+            new trends
+            <p className="xs:text-sm lg:text-3xl">Feels the vibe</p>
+          </div>
+          <div className="absolute text-white xs:right-5 xs:top-4 xs:text-sm lg:right-12 lg:top-[4vh] lg:text-4xl">
+            <span className="underline decoration-blue-500 underline-offset-4">
+              Experience
+            </span>{' '}
+            more
+            <p className="xs:text-md lg:text-lg">Live the better</p>
+          </div>
         </div>
       </div>
     </div>
