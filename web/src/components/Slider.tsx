@@ -1,10 +1,10 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { useState } from 'react'
 
 export const Slider = () => {
-  const [frases, setFrases] = useState([
+  const frases = [
     'Discover',
     'Iconic',
     'Sleek',
@@ -12,16 +12,7 @@ export const Slider = () => {
     'Inspire',
     'Innovate',
     'Flawless',
-  ])
-  const [ifrase, setifrase] = useState(0)
-
-  const proxFrase = () => {
-    setifrase((ifrase + 1) % frases.length)
-  }
-
-  setTimeout(() => {
-    proxFrase()
-  }, 3000)
+  ]
 
   const images = [
     '/model-12.jpg',
@@ -29,6 +20,17 @@ export const Slider = () => {
     '/model-6.jpg',
     '/model-11.jpg',
   ]
+
+  const [fraseAtual, setFraseAtual] = useState(frases[0])
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const proximaFraseIndex = (frases.indexOf(fraseAtual) + 1) % frases.length
+      setFraseAtual(frases[proximaFraseIndex])
+    }, 3000)
+
+    return () => clearInterval(interval)
+  }, [frases, fraseAtual])
 
   return (
     <div className="w-full">
@@ -48,7 +50,7 @@ export const Slider = () => {
 
           <div className="xs:text-md absolute text-white xs:left-12 xs:top-28 lg:left-28 lg:top-[37vh] lg:text-6xl">
             <span className="underline decoration-blue-500 underline-offset-4">
-              {frases[ifrase]}
+              {fraseAtual}
             </span>{' '}
             new trends
             <p className="xs:text-sm lg:text-3xl">Feels the vibe</p>
