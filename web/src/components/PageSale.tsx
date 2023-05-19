@@ -14,6 +14,8 @@ const PageSale = () => {
           size={''}
           desc={''}
           stock={0}
+          quantity={0}
+          selectedProductId={0}
         />
       </div>
       <div className="grid justify-items-center">
