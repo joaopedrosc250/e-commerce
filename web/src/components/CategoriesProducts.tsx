@@ -27,6 +27,7 @@ function CategoriesProducts() {
                   desc={''}
                   stock={0}
                   quantity={0}
+                  selectedProductId={0}
                 />
               ),
             )}
@@ -57,6 +58,7 @@ function CategoriesProducts() {
                 desc={''}
                 stock={0}
                 quantity={0}
+                selectedProductId={0}
               />
             ))}
         </div>
@@ -86,6 +88,7 @@ function CategoriesProducts() {
                 desc={''}
                 stock={0}
                 quantity={0}
+                selectedProductId={0}
               />
             ))}
         </div>
