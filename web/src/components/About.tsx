@@ -1,6 +1,9 @@
 export default function About() {
   return (
-    <div className="item-center mb-16 mt-8 flex flex-col justify-center font-alt xs:w-full xs:px-14 lg:w-3/4">
+    <div
+      id="about"
+      className="item-center mb-16 mt-8 flex flex-col justify-center font-alt xs:w-full xs:px-14 lg:w-3/4"
+    >
       <div className="flex flex-col items-center justify-center gap-4 text-justify">
         <h1 className="text-2xl">About us</h1>
         <p>

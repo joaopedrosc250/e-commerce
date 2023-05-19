@@ -14,33 +14,29 @@ export const Footer = () => {
           </p>
         </div>
         <div className="flex justify-center gap-4 font-alt">
-          <ul className="flex flex-row justify-center gap-2 xs:items-center lg:items-center">
-            <li>
-              <Link
-                className="transition-all hover:underline hover:underline-offset-1"
-                href="/"
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="transition-all hover:underline hover:underline-offset-1"
-                href="/shop"
-              >
-                Categories
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="transition-all hover:underline hover:underline-offset-1"
-                href="mailto: amaralrdev@gmail.com"
-                target="_blank"
-              >
-                Mail
-              </Link>
-            </li>
-          </ul>
+          <div className="flex flex-row justify-center gap-2 xs:items-center lg:items-center">
+            <Link
+              className="transition-all hover:underline hover:underline-offset-1"
+              href="/"
+            >
+              Home
+            </Link>
+
+            <Link
+              className="transition-all hover:underline hover:underline-offset-1"
+              href="/shop"
+            >
+              Categories
+            </Link>
+
+            <Link
+              className="transition-all hover:underline hover:underline-offset-1"
+              href="mailto: amaralrdev@gmail.com"
+              target="_blank"
+            >
+              Mail
+            </Link>
+          </div>
         </div>
         <div className="flex flex-col items-center justify-center gap-1">
           <i className="font-bold">Social</i>

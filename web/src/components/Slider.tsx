@@ -11,21 +11,23 @@ export const Slider = () => {
   return (
     <div className="w-full">
       <div className="flex justify-center overflow-hidden lg:flex-row">
-        <div className="flex items-center xs:p-4 lg:h-[35rem]">
+        <div className="pointer-events-none relative flex items-center xs:p-4 lg:h-[35rem] ">
           {images.slice(0, 4).map((image) => (
-            <div
-              className="h-full transition-all ease-in-out hover:scale-105 lg:hover:pl-2 lg:hover:pr-2"
-              key={image}
-            >
+            <div className="h-full" key={image}>
               <Image
                 src={image}
                 alt="image"
                 width={1920}
                 height={1080}
-                className="h-full w-full cursor-pointer transition-all ease-in-out hover:rounded-3xl"
+                className="h-full w-full"
               />
             </div>
           ))}
+          <h1 className="absolute text-white xs:left-16 xs:top-24 xs:text-3xl lg:left-40 lg:top-1/2 lg:text-6xl">
+            <span className="underline underline-offset-4">Discover</span> new
+            trends
+            <p className="xs:text-xl lg:text-4xl">Feels the vibe</p>
+          </h1>
         </div>
       </div>
     </div>

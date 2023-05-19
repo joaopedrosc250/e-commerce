@@ -33,11 +33,11 @@ export const Nav = () => {
           <Link className="" href="/shop/fav">
             <Heart size={30} />
           </Link>
-          {/* {
-                  <Link className="scale-125 " href="/home/profile/1">
-                    <User size={30} />
-                  </Link>
-        } */}
+          {/* {isAuthenticated ? null : (
+            <Link className="scale-125 " href="/home/profile/1">
+              <User size={28} />
+            </Link>
+          )} */}
         </div>
         <div className="flex lg:hidden">
           <button title="button" onClick={() => setMenuOpen((prev) => !prev)}>
@@ -63,9 +63,11 @@ export const Nav = () => {
             <Link className="" href="/shop/fav">
               <Heart size={30} />
             </Link>
-            {/* <Link className="scale-125 " href="/home/profile/1">
-              <User size={30} />
-            </Link> */}
+            {/* {isAuthenticated ? null : (
+            <Link className="scale-125 " href="/home/profile/1">
+              <User size={28} />
+            </Link>
+          )} */}
           </div>
         </div>
       )}

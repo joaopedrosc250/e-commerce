@@ -20,8 +20,6 @@ export default function Products(props: any) {
 
   const prodType = props.params.type
 
-  console.log('renderizou')
-
   // hooks para alterar o título
   useEffect(() => {
     if (prodType === 'tshirt') {
