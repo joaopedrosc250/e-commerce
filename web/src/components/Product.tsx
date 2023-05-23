@@ -13,7 +13,7 @@ export const Product = ({ id, url, image, title, price }: ProductProps) => {
           width={1920}
           height={1080}
         />
-        <p className="text-lg font-bold">{title}</p>
+        <p className="text-lg">{title}</p>
       </Link>
       <p className="mb-1 text-center">$ {price}</p>
     </div>

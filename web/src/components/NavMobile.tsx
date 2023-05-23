@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function NavMobile() {
   return (
     <div className="w-full bg-white font-alt lg:hidden">
-      <div className="flex flex-col items-center justify-center gap-2">
+      <div className="flex flex-col items-end justify-center gap-2">
         <Link className="transition-colors hover:text-zinc-700" href="/shop">
           Shop
         </Link>

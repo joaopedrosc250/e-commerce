@@ -8,7 +8,7 @@ function PageProductInfo({ id, title, price, stock }: PageProductProps) {
   return (
     <div
       key={id}
-      className="relative flex w-full flex-col justify-center gap-4 xs:items-center lg:items-start"
+      className="flex w-full flex-col justify-center gap-4 xs:items-center lg:items-start"
     >
       <h2 className="text-2xl font-bold">{title}</h2>
       <p className="text-xl">$ {price}</p>
@@ -27,7 +27,7 @@ function PageProductInfo({ id, title, price, stock }: PageProductProps) {
           href="#"
           className="flex items-center justify-center bg-zinc-900 p-2 text-white"
         >
-          Finish
+          Buy
         </Link>
       </div>
       <SizeSelection />

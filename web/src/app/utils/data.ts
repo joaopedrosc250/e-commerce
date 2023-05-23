@@ -153,7 +153,7 @@ const data = {
       type: 'cap',
       size: '',
       url: '/shop/pageproduct/14',
-      image: '/touca.jpg',
+      image: '/cap-1.jpg',
       price: 87.5,
       stock: 50,
       desc: "Stay cool and stylish with our trendy cap-1. Made from high-quality materials, it's perfect for any casual occasion. Available in different colors.",

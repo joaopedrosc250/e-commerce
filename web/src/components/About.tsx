@@ -20,12 +20,9 @@ export default function About() {
           our carefully selected streetwear selection, designed to elevate your
           style while keeping you comfortable throughout the day.
         </p>
-        <div className="flex flex-row gap-4">
-          <Link href="/home">Sign in</Link>
-          <Link className="font-semibold text-blue-600" href="/home">
-            Register now
-          </Link>
-        </div>
+        <Link className="font-semibold text-blue-600" href="/home">
+          Register now
+        </Link>
       </div>
     </div>
   )
