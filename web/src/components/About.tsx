@@ -1,11 +1,12 @@
+import Link from 'next/link'
+
 export default function About() {
   return (
     <div
       id="about"
       className="item-center mb-16 mt-8 flex flex-col justify-center font-alt xs:w-full xs:px-14 lg:w-3/4"
     >
-      <div className="flex flex-col items-center justify-center gap-4 text-justify">
-        <h1 className="text-2xl">F.A.Q</h1>
+      <div className="flex flex-col items-center justify-center gap-6 text-justify">
         <p>
           Discover a curated collection of trendy streetwear pieces that embrace
           the latest fashion trends, without compromising on comfort. From sleek
@@ -19,6 +20,12 @@ export default function About() {
           our carefully selected streetwear selection, designed to elevate your
           style while keeping you comfortable throughout the day.
         </p>
+        <div className="flex flex-row gap-4">
+          <Link href="/home">Sign in</Link>
+          <Link className="font-semibold text-blue-600" href="/home">
+            Register now
+          </Link>
+        </div>
       </div>
     </div>
   )
