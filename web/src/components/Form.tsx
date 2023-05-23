@@ -69,15 +69,16 @@ export const Form = () => {
               onClick={togglePasswordVisibility}
               className="flex cursor-pointer items-center text-gray-600"
             ></button>
+            <div className="mt-4 flex w-full items-center justify-center">
+              <button
+                type="submit"
+                value="Send"
+                className="rounded-xl bg-blue-600 p-2 text-white transition-colors ease-in-out hover:bg-black"
+              >
+                Submit
+              </button>
+            </div>
           </form>
-          <button
-            title="submit"
-            type="submit"
-            value="Send"
-            className="rounded-xl bg-blue-600 p-2 text-white transition-colors ease-in-out hover:rounded-none hover:bg-black"
-          >
-            Submit
-          </button>
         </div>
         <div className="flex flex-row gap-1">
           <p>I have an account.</p>
