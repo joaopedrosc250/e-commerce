@@ -2,7 +2,7 @@ import { Product } from '@/components/Product'
 import Link from 'next/link'
 import data from '../app/utils/data'
 
-function CategoriesProducts() {
+export default function CategoriesProducts() {
   return (
     <div id="tshirts" className="xs:col-span-1 lg:col-span-3">
       <div className="mt-16 grid justify-items-center gap-4">
@@ -27,7 +27,6 @@ function CategoriesProducts() {
                   desc={''}
                   stock={0}
                   quantity={0}
-                  selectedProductId={0}
                 />
               ),
             )}
@@ -58,7 +57,6 @@ function CategoriesProducts() {
                 desc={''}
                 stock={0}
                 quantity={0}
-                selectedProductId={0}
               />
             ))}
         </div>
@@ -88,7 +86,6 @@ function CategoriesProducts() {
                 desc={''}
                 stock={0}
                 quantity={0}
-                selectedProductId={0}
               />
             ))}
         </div>
@@ -102,5 +99,3 @@ function CategoriesProducts() {
     </div>
   )
 }
-
-export default CategoriesProducts
