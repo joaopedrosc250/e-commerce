@@ -258,7 +258,7 @@ const data = {
       type: 'shoe',
       size: '',
       url: '/shop/pageproduct/22',
-      image: '/shoe-4.jpg',
+      image: '/court-1.jpg',
       desc: "Elevate your style with our shoe-4. Made from high-quality materials and designed with attention to detail, it's the perfect shoe for any occasion.",
       price: 104.99,
       stock: 5,

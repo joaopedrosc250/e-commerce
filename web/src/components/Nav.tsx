@@ -18,13 +18,16 @@ export const Nav = () => {
         </div>
         <div className="items-end justify-center gap-4 font-alt xs:hidden lg:flex lg:flex-row ">
           <Link className="transition-colors hover:text-zinc-700" href="/shop">
-            Shop
+            shop
+          </Link>
+          <Link className="transition-colors hover:text-zinc-700" href="/look">
+            lookbook
           </Link>
           <Link href="/home">
             <User size={24} />
           </Link>
           <Link className="flex flex-row" href="/shop/cart">
-            <ShoppingCart size={28} />0
+            <ShoppingCart size={26} />0
           </Link>
         </div>
         <div className="flex lg:hidden">
