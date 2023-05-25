@@ -4,6 +4,7 @@ import About from '@/components/About'
 import { Slider } from '@/components/Slider'
 
 export default function Main() {
+  
   return (
     <div id="" className="flex flex-col items-center justify-center bg-white">
       <Nav />
